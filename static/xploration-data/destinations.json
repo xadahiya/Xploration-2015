@@ -42,7 +42,7 @@
     "use_in_game": true
   },
     {
-    "name": "Halley\'s comet",
+    "name": "Halley's comet",
     "palette": [ "#B3CFFD", 179, 207, 253 ],
     "use_in_game": false
   },
@@ -78,7 +78,7 @@
   },
   {
     "name": "Not Listed",
-    "note": "all the other planets' satellites"
+    "note": "all the other planets' satellites",
     "palette": [ "#EEEEEE", 238, 238, 238],
     "use_in_game": true
   }
