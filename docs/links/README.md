@@ -1,0 +1,1 @@
+# Collection of links to resources and libraries to be used for the hackathon

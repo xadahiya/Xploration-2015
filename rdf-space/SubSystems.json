@@ -439,7 +439,7 @@
             ],
 
             "rdfs:label": "Spacecraft_Thermal_PassiveDevice",
-            "skos:prefLabel": "Device of of class Thermal that does NOT consume energy from the spacecraft power source.",
+            "skos:prefLabel": "Device of class Thermal that DOES NOT consume energy from the spacecraft power source.",
             "rdfs:comment": "They are passive because they mostly transform radiation into heating/cooling ",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
@@ -465,7 +465,7 @@
             ],
 
             "rdfs:label": "Spacecraft_Thermal_ActiveDevice",
-            "skos:prefLabel": "Device that of class Thermal that consumes energy from the spacecraft power source.",
+            "skos:prefLabel": "Device of class Thermal that DOES consume energy from the spacecraft power source.",
             "rdfs:comment": "Complex devices-subsystems used to protect sensors or electronic devices from over/under-heating, like refrigeration absorption."
 
         },
@@ -858,8 +858,8 @@
                       ]
                 }
             ],
-            "rdfs:label": "Spacecraft_AODCS_Active",
-            "skos:prefLabel": "AODCS that do not use any power from the spacecraft power to work.",
+            "rdfs:label": "Spacecraft_AODCS_ActiveDevice",
+            "skos:prefLabel": "AODCS device that DOES use power from the spacecraft power to work.",
             "rdfs:comment": "Do NOT use any additional power from the spacecraft generator"
         },
         {
@@ -876,7 +876,7 @@
               }
             ],
             "rdfs:label": "Spacecraft_AODCS_PassiveDevice",
-            "skos:prefLabel": "AODCS that do not use any power from the spacecraft power to work.",
+            "skos:prefLabel": "AODCS that DOES NOT use power from the spacecraft power to work.",
             "rdfs:comment": "DO use any additional power from the spacecraft generator"
         }
   ]
