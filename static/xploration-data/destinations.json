@@ -1,6 +1,6 @@
 [
   {
-    "name": "Sun"
+    "name": "Sun",
     "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Sun",
     "palette": [ "#92ADCB", 146, 173, 203 ],
     "use_in_game": true
