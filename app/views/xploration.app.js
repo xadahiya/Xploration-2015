@@ -6,9 +6,10 @@ define([
     'views/mission.selector.view', 
     'views/mission.builder.view',
     'views/mission.deploy.view',
+    'views/mission.launch.view',
     'models/app.model'
 
-], function($, _, vidbg, missionSelector, missionBuilder, missionDeploy, AppModel) {
+], function($, _, vidbg, missionSelector, missionBuilder, missionDeploy, missionLaunch, AppModel) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'xploration-app',
@@ -21,11 +22,13 @@ define([
         	var msv = new missionSelector({model: this.model});
             var mbv = new missionBuilder({model: this.model});
             var mdv = new missionDeploy({model: this.model});
+            var mlv = new missionLaunch({model: this.model});
 
         	self['views'] = {
         		missionSelector: msv,
                 missionBuilder: mbv,
-                missionDeploy: mdv
+                missionDeploy: mdv,
+                missionLaunch: mlv
         	};
 
             self.$el.prependTo($('body'));
