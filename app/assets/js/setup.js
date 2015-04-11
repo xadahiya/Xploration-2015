@@ -9,6 +9,7 @@
             'underscore': 'assets/js/underscore-min',
             'backbone': 'assets/js/backbone-min',
             'template': 'assets/js/template',
+            'json': 'assets/js/json',
             'xploration.app': 'views/xploration.app',
             'vidbg': 'assets/js/vidbg.min'
         },
