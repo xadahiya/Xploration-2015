@@ -4,9 +4,9 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
         className: 'xploration-app',
         id: 'pramanta-xploration-space-app-2015',
         initialize: function() {
-
+            var self = window.app = this;
             self.setupVideo();
-        	var self = window.app = this;
+
         	var msv = new missionSelector();
             var mbv = new missionBuilder();
 
@@ -17,7 +17,7 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
 
             self.$el.prependTo($('body'));
 
-            self.prepareVideo();
+
         	self.render();
 
             return Backbone.View.prototype.initialize.apply(self, arguments);
@@ -37,33 +37,27 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
 
         },
         render: function(opts) {
-
             Backbone.View.prototype.render.apply(self, arguments);
-            console.log(opts);
-            opts      = opts || {};
-            opts.view = opts.view || 'missionSelector';
-        	var self  = this;
-
-            var renderView = self.views[opts.view];
-
-            console.log(renderView);
-
-            if (self.activeView) {
-                self.activeView.$el.detach();
-                self.activeView = null;
-            }
-
-            if (renderView) {
-                renderView.render().$el.appendTo(self.el);
-                self.activeView = renderView;
-            }
-
+            this.show(opts);
         	$('#preloader').delay(1000).fadeOut(500, function(){
         		$(this).remove();
         		$('body').addClass('ready');
         	});
-
         	return self;
+        },
+        show: function(opts) {
+            opts           = opts || {};
+            opts.view      = opts.view || 'missionSelector';
+            var renderView = this.views[opts.view];
+            if (this.activeView) {
+                this.activeView.$el.detach();
+                this.activeView = null;
+            }
+            if (renderView) {
+                renderView.render().$el.appendTo(this.el);
+                this.activeView = renderView;
+            }
+            return this;
         }
     });
 
