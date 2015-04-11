@@ -30,7 +30,7 @@
     {
         "slug": "sample_collect",
         "name": "Collect Surface Samples",
-        "description": "We wil lrock it!",
+        "description": "We will rock it!",
         "palette": [ "#968C82", 150, 140, 130],
         "use_in_game": true
     },
