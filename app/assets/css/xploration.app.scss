@@ -1,36 +1,74 @@
 /* -------------------------------------------------
                     MIXIN
 -------------------------------------------------- */
-@import 'mixins';
 
+@import 'mixins';
 /* -------------------------------------------------
                     XPLORATION
 -------------------------------------------------- */
+
 body {
-	background: #171717;
-	@include transition(background, 500ms, ease-out);
-	&.ready {
-		background: #ececf0
-	}
+    background: #171717;
+    @include transition(background, 500ms, ease-out);
+    &.ready {
+        background: #ececf0
+    }
 }
+
 .xploration-app {
-	position: absolute;
-	margin:0;
-	top:0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-    z-index: 1;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
     .vidbg {
         position: absolute;
-        width:100%;
+        width: 100%;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
+        opacity: 0;
         z-index: 0;
+        @include transition(opacity, 500ms, ease-out);
+        &.show {
+            opacity: 1;
+        }
+        .vidbg-overlay {
+            background: url(../images/bg.png) repeat;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        video {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
     }
     .view {
         z-index: 1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &.mission-selector {
+            article.form {
+                background: rgba(255, 255, 255, .9);
+                padding: 50px;
+                max-width: 960px;
+                margin: auto;
+                margin-top: 120px;
+                @include borderRadius();
+            }
+        }
     }
 }

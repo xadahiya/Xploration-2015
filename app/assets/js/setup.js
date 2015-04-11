@@ -5,7 +5,8 @@
         baseUrl: "./",
         paths: {
             'jquery': 'assets/js/jquery-1.11.2.min',
-            'foundation': 'assets/js/foundation/foundation.min',
+            'foundation': 'assets/js/foundation.min',
+            'foundation-dropdown': 'assets/js/foundation/foundation.dropdown',
             'underscore': 'assets/js/underscore-min',
             'backbone': 'assets/js/backbone-min',
             'template': 'assets/js/template',
@@ -16,6 +17,9 @@
             'foundation': {
                 deps: ['jquery']
             },
+            'foundation-dropdown': {
+                deps: ['foundation']
+            },
             'backbone': {
                 deps: ['jquery', 'underscore']
             },
@@ -23,7 +27,7 @@
                 deps: ['jquery', 'underscore', 'backbone']
             },
             'xploration.app': {
-                deps: ['jquery', 'underscore', 'backbone', 'foundation', 'vidbg']
+                deps: ['jquery', 'underscore', 'backbone', 'foundation', 'vidbg', 'foundation-dropdown']
             },
         },
         urlArgs: "version=" + version
