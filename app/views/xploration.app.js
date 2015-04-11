@@ -1,23 +1,34 @@
-define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/mission.builder.view'], function($, _, vidbg, missionSelector, missionBuilder) {
+define([
+
+    'jquery', 
+    'underscore', 
+    'vidbg', 
+    'views/mission.selector.view', 
+    'views/mission.builder.view',
+    'views/mission.deploy.view',
+    'models/app.model'
+
+], function($, _, vidbg, missionSelector, missionBuilder, missionDeploy, AppModel) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'xploration-app',
         id: 'pramanta-xploration-space-app-2015',
+        model: new AppModel(),
         initialize: function() {
             var self = window.app = this;
             self.setupVideo();
 
-        	var msv = new missionSelector();
-            var mbv = new missionBuilder();
+        	var msv = new missionSelector({model: this.model});
+            var mbv = new missionBuilder({model: this.model});
+            var mdv = new missionDeploy({model: this.model});
 
         	self['views'] = {
         		missionSelector: msv,
-                missionBuilder: mbv
+                missionBuilder: mbv,
+                missionDeploy: mdv
         	};
 
             self.$el.prependTo($('body'));
-
-
         	self.render();
 
             return Backbone.View.prototype.initialize.apply(self, arguments);
