@@ -7,7 +7,6 @@ define([
     'views/mission.deploy.view',
     'views/mission.launch.view',
     'models/app.model'
-
 ], function($, _, vidbg, missionSelector, missionBuilder, missionDeploy, missionLaunch, AppModel) {
 
     var XplorationApp = Backbone.View.extend({
@@ -18,21 +17,7 @@ define([
             var self = this;
 
             self.setupVideo();
-            var self = window.app = this;
-            var msv = new missionSelector();
-            var mbv = new missionBuilder();
 
-            self['views'] = {
-                missionSelector: msv,
-                missionBuilder: mbv
-            };
-
-            self.$el.prependTo($('body'));
-
-            self.render();
-
-            var self = window.app = this;
-            self.setupVideo();
 
         	var msv = new missionSelector({model: this.model});
             var mbv = new missionBuilder({model: this.model});
@@ -103,13 +88,16 @@ define([
             return self;
         },
         enterApp: function() {
+            var self = this;
             $('#preloader').delay(1000).fadeOut(500, function() {
                 $(this).remove();
                 $('body').addClass('ready');
                 $('.vidbg').addClass('show');
-                $('.xploration-app').fadeIn(250);
+                $('.xploration-app').fadeIn(250, function() {
+                    self.$el.find('article.form').addClass('show');
+                });
             });
-            this.show(opts);
+            self.show(opts);
 
         	return self;
         },
