@@ -11,11 +11,11 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
         	var self = this;
             self.markup = TPL_mission_selector(parameters);
 
-            self.$el.append(self.markup);
+            self.$el.html(self.markup);
 
             Backbone.View.prototype.render.apply(self, arguments);
 
-            return self.$el;
+            return self;
         }
     });
 

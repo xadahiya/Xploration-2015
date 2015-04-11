@@ -1,35 +1,52 @@
-define(['jquery', 'underscore', 'views/mission.selector.view'], function($, _,  missionSelector) {
+define(['jquery', 'underscore', 'views/mission.selector.view', 'views/mission.builder.view'], function($, _,  missionSelector, missionBuilder) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'xploration-app',
         id: 'pramanta-xploration-space-app-2015',
         initialize: function() {
-        	var self = this;
+        	var self = window.app = this;
         	var msv = new missionSelector();
+            var mbv = new missionBuilder();
 
         	self['views'] = {
-        		missionSelector: msv
+        		missionSelector: msv,
+                missionBuilder: mbv
         	};
+
+            self.$el.prependTo($('body'));
 
         	self.render();
 
         	return Backbone.View.prototype.initialize.apply(self, arguments);
         },
-        render: function() {
-        	var self = this;
+        render: function(opts) {
 
-        	var markup = self.views.missionSelector.render();
+            Backbone.View.prototype.render.apply(self, arguments);
+            console.log(opts);
+            opts      = opts || {};
+            opts.view = opts.view || 'missionSelector';
+        	var self  = this;
 
-        	self.$el.append( markup );
+            var renderView = self.views[opts.view];
 
+            console.log(renderView);
 
-        	$("body").prepend(self.$el)
+            if (self.activeView) {
+                self.activeView.$el.detach();
+                self.activeView = null;
+            }
+
+            if (renderView) {
+                renderView.render().$el.appendTo(self.el);
+                self.activeView = renderView;
+            }
+
         	$('#preloader').delay(500).fadeOut(500, function(){
         		$(this).remove();
-        		$("body").addClass('ready');
+        		$('body').addClass('ready');
         	});
 
-        	return Backbone.View.prototype.render.apply(self, arguments);
+        	return self;
         }
     });
 
