@@ -1,0 +1,148 @@
+[
+
+
+
+  {
+    "target": "earth",
+    "type": "earth_observation",
+    "scientific_interest": 1000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "spectrometer"
+      },
+      {
+        "type": "payload",
+        "class": "interferometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": +50
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "target": "comet",
+    "type": "celestial_body_observation",
+    "scientific_interest": 5000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "optical"
+      },
+      {
+        "type": "payload",
+        "class": "detector"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -80,
+        "maxValue": +80
+      }
+    ]
+  },
+
+
+
+
+
+
+
+  {
+    "target": "earth",
+    "type": "atmospheric_analysis",
+    "scientific_interest": 2000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "photometer"
+      },
+      {
+        "type": "payload",
+        "class": "interferometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": +50
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "target": "mars",
+    "type": "celestial_body_observation",
+    "scientific_interest": 4000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "optical"
+      },
+      {
+        "type": "payload",
+        "class": "photometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -60,
+        "maxValue": +50
+      }
+    ]
+  },
+
+  
+
+
+    {
+    "target": "moon",
+    "type": "celestial_body_observation",
+    "scientific_interest": 3000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "spectrometer"
+      },
+      {
+        "type": "payload",
+        "class": "detector"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": +50
+      }
+    ]
+  }
+
+
+
+
+]

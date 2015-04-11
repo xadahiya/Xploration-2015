@@ -1,8 +1,19 @@
-define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/mission.builder.view'], function($, _, vidbg, missionSelector, missionBuilder) {
+define([
+    'jquery',
+    'underscore',
+    'vidbg',
+    'views/mission.selector.view',
+    'views/mission.builder.view',
+    'views/mission.deploy.view',
+    'views/mission.launch.view',
+    'models/app.model'
+
+], function($, _, vidbg, missionSelector, missionBuilder, missionDeploy, missionLaunch, AppModel) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'xploration-app',
         id: 'pramanta-xploration-space-app-2015',
+        model: new AppModel(),
         initialize: function() {
             var self = this;
 
@@ -19,6 +30,24 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
             self.$el.prependTo($('body'));
 
             self.render();
+
+            var self = window.app = this;
+            self.setupVideo();
+
+        	var msv = new missionSelector({model: this.model});
+            var mbv = new missionBuilder({model: this.model});
+            var mdv = new missionDeploy({model: this.model});
+            var mlv = new missionLaunch({model: this.model});
+
+        	self['views'] = {
+        		missionSelector: msv,
+                missionBuilder: mbv,
+                missionDeploy: mdv,
+                missionLaunch: mlv
+        	};
+
+            self.$el.prependTo($('body'));
+        	self.render();
 
             return Backbone.View.prototype.initialize.apply(self, arguments);
         },
@@ -51,9 +80,8 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
             }
         },
         render: function(opts) {
-
             Backbone.View.prototype.render.apply(self, arguments);
-            console.log(opts);
+
             opts = opts || {};
             opts.view = opts.view || 'missionSelector';
             var self = this;
@@ -81,6 +109,23 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view', 'views/m
                 $('.vidbg').addClass('show');
                 $('.xploration-app').fadeIn(250);
             });
+            this.show(opts);
+
+        	return self;
+        },
+        show: function(opts) {
+            opts           = opts || {};
+            opts.view      = opts.view || 'missionSelector';
+            var renderView = this.views[opts.view];
+            if (this.activeView) {
+                this.activeView.$el.detach();
+                this.activeView = null;
+            }
+            if (renderView) {
+                renderView.render().$el.appendTo(this.el);
+                this.activeView = renderView;
+            }
+            return this;
         }
     });
 
