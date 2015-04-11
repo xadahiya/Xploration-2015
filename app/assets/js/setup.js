@@ -4,13 +4,13 @@
     requirejs.config({
         baseUrl: "./",
         paths: {
-            'jquery':           'assets/js/jquery-1.11.2.min',
-            'foundation':       'assets/js/foundation/foundation.min',
-            'underscore':       'assets/js/underscore-min',
-            'backbone':         'assets/js/backbone-min',
-            'template':         'assets/js/template',
-            'xploration.app':   'views/xploration.app',
-            'vidbg':            'assets/js/vidbg.min'
+            'jquery': 'assets/js/jquery-1.11.2.min',
+            'foundation': 'assets/js/foundation/foundation.min',
+            'underscore': 'assets/js/underscore-min',
+            'backbone': 'assets/js/backbone-min',
+            'template': 'assets/js/template',
+            'xploration.app': 'views/xploration.app',
+            'vidbg': 'assets/js/vidbg.min'
         },
         shim: {
             'foundation': {
@@ -23,14 +23,14 @@
                 deps: ['jquery', 'underscore', 'backbone']
             },
             'xploration.app': {
-                deps: ['jquery', 'foundation', 'backbone', 'underscore', 'vidbg']
+                deps: ['jquery', 'underscore', 'backbone', 'foundation', 'vidbg']
             },
         },
         urlArgs: "version=" + version
     });
 
     /* App initialize */
-    requirejs(['xploration.app'], function(App) {
+    requirejs(['xploration.app'], function(App)  {
         var app = global['app'] = new App();
     });
 })(window);

@@ -7,7 +7,7 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view'], functio
             var self = this;
             var msv = new missionSelector();
 
-            self.prepareVideo();
+            self.setupVideo();
 
             self['views'] = {
                 missionSelector: msv
@@ -17,12 +17,20 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view'], functio
 
             return Backbone.View.prototype.initialize.apply(self, arguments);
         },
-        prepareVideo: function() {
+        setupVideo: function() {
             var self = this;
             vidbg(self.el, [{
                 src: 'assets/video/earth.mov',
                 type: 'mov'
             }], true);
+
+            self.checkReadyState();
+        },
+        checkReadyState: function() {
+            var self = this;
+            var video = self.$el.find('video').get(0);
+
+            
         },
         render: function() {
             var self = this;
