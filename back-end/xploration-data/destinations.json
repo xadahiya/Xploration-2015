@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Sun",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Sun",
+    "palette": [ "#92ADCB", 146, 173, 203 ],
+    "use_in_game": true
+  },
+  {
+    "name": "Mercury",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Mercury",
+    "palette": [ "#7B726F", 123, 114, 111 ],
+    "use_in_game": true
+  },
+  {
+    "name": "Venus",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Venus",
+    "palette": [ "#BDBDBD", 189, 189, 189 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Earth",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Earth",
+    "palette": [ "#6A7E7A", 106 , 126 ,122 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Mars",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Mars",
+    "palette": [ "#424242", 66, 66, 66 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Moon",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Moon",
+    "palette": [ "#9B969B", 155, 150, 155 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Asteroid belt",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Asteroid_belt",
+    "palette": [ "#EEEEEE", 238, 238, 238 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Halley's comet",
+    "palette": [ "#B3CFFD", 179, 207, 253 ],
+    "use_in_game": false
+  },
+    {
+    "name": "Jupiter",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Jupiter",
+    "palette": [ "#6C91C6", 108, 145, 198 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Saturn",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Saturn",
+    "palette": [ "#686774", 104, 103, 116 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Uranus",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Uranus",
+    "palette": [ "#7C8982", 124, 137, 130 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Neptune",
+    "rdf_voc": "http://ontology.projectchronos.eu/solarsystem/Neptune",
+    "palette": [ "#0A1E46", 10, 30, 70 ],
+    "use_in_game": true
+  },
+    {
+    "name": "Outer space",
+    "rdf_voc": "http://ontology.projectchronos.eu/astronomy/Outer_space",
+    "palette": [ "#EEEEEE", 238, 238, 238],
+    "use_in_game": true
+  },
+  {
+    "name": "Not Listed",
+    "note": "all the other planets' satellites",
+    "palette": [ "#EEEEEE", 238, 238, 238],
+    "use_in_game": true
+  }
+
+
+]

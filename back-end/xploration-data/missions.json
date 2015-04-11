@@ -1,0 +1,44 @@
+[
+    {
+        "slug": "earth_obs",
+        "name": "Earth Observation",
+        "description": "Look down at Earth's surface.It's a World Of Wonders!",
+        "palette": [ "#7C9D7C", 124, 157, 124 ],
+        "use_in_game": true
+    },
+    {
+        "slug": "cel_body_obs",
+        "name": "Solar System's Bodies Observation",
+        "description": "We have nice neighbours, let's keep in touch with them!",
+        "palette": [ "#82646A", 130, 100, 106 ],
+        "use_in_game": true
+    },
+    {
+        "slug": "deep_space_obs",
+        "name": "Deep Space Observation",
+        "description": "We can learn a lot contemplating other systems",
+        "palette": [ "#2D3241", 45, 50, 56 ],
+        "use_in_game": true
+    },
+    {
+        "slug": "atm_analysis",
+        "name": "Atmospheric Analysis",
+        "description": "Love is in the air?",
+        "palette": [ "#919191", 145, 145, 145 ],
+        "use_in_game": true
+    },
+    {
+        "slug": "sample_collect",
+        "name": "Collect Surface Samples",
+        "description": "We will rock it!",
+        "palette": [ "#968C82", 150, 140, 130],
+        "use_in_game": true
+    },
+    {
+        "slug": "telecom",
+        "name": "Orbital Telecommunication",
+        "description": "What if I would like to talk to Antartics?",
+        "palette": [ "#AEBDBA", 174, 189, 186],
+        "use_in_game": true
+    }
+]
