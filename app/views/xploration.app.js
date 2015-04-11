@@ -30,7 +30,6 @@ define(['jquery', 'underscore', 'vidbg', 'views/mission.selector.view'], functio
             var self = this;
             var video = self.$el.find('video').get(0);
 
-            
         },
         render: function() {
             var self = this;
