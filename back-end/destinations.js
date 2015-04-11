@@ -23,6 +23,7 @@ function destinations(app, callback) {
           });
         });
         app.get('/destinations', function (req, res) {
+          res.contentType('application/json');
           res.send(
             JSON.stringify(
               Object.keys(missionTypesMap).map(

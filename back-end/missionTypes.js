@@ -23,6 +23,7 @@ function missionTypes(app, callback) {
           });
         });
         app.get('/missions', function (req, res) {
+          res.contentType('application/json');
           res.send(
             JSON.stringify(
               Object.keys(missionTypesMap).map(
