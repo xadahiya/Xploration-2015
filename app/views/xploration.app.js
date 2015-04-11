@@ -24,7 +24,7 @@ define(['jquery', 'underscore', 'views/mission.selector.view'], function($, _,  
 
 
         	$("body").prepend(self.$el)
-        	$('#preloader').delay(500).fadeOut(500, function(){
+        	$('#preloader').delay(1000).fadeOut(500, function(){
         		$(this).remove();
         		$("body").addClass('ready');
         	});
