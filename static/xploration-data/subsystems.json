@@ -1,0 +1,38 @@
+{
+	"communication" : {
+		"slug": "COM",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication"
+	},
+	"propulsion" : {
+		"slug": "PROP",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion"
+	},
+	"detector" : {
+		"slug": "DTR",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector"
+	},
+	"primary power" : {
+		"slug": "PPW",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower"
+	},
+	"backup power" : {
+		"slug": "BCK",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower"
+	},
+	"thermal" : {
+		"slug": "THR",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal"
+	},
+	"structure" : {
+		"slug": "STR",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Structure"
+	},
+	"command and data" : {
+		"slug": "CDH",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+	},
+	"attitude and orbit control" : {
+		"slug": "AODCS",
+		"ontology": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS"
+	}
+}
