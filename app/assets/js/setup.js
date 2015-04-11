@@ -5,11 +5,12 @@
         baseUrl: "./",
         paths: {
             'jquery':           'assets/js/jquery-1.11.2.min',
-            'foundation':       'assets/js/foundation.min',
+            'foundation':       'assets/js/foundation/foundation.min',
             'underscore':       'assets/js/underscore-min',
             'backbone':         'assets/js/backbone-min',
             'template':         'assets/js/template',
-            'xploration.app':   'views/xploration.app'
+            'xploration.app':   'views/xploration.app',
+            'vidbg':            'assets/js/vidbg.min'
         },
         shim: {
             'foundation': {
@@ -22,7 +23,7 @@
                 deps: ['jquery', 'underscore', 'backbone']
             },
             'xploration.app': {
-                deps: ['jquery', 'foundation', 'backbone', 'underscore']
+                deps: ['jquery', 'foundation', 'backbone', 'underscore', 'vidbg']
             },
         },
         urlArgs: "version=" + version
