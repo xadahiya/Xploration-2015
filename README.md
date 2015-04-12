@@ -32,7 +32,7 @@ SpaceApps Rome 2015 - Project Chronos
 ## Instructions
 
 ```
-npm install node-static
+npm install -g node-static
 ```
 
 From the `/app` directory:
