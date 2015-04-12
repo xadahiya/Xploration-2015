@@ -8,66 +8,69 @@
                 <h5><i class="fa fa-rocket"></i> Selected mission: <span><%= mission.nicename %></span></h5>
             </div>
             <div class="select-categories right">
-				<select id="ul-selector" name="ul-selector">
-					<option>Select component category</option>
-                    <% for (var i = 0, keys = Object.keys(components); i < keys.length; i++) { %>
-					   <option value="#list-<%= keys[i] %>"><%= keys[i] %></option>
-                    <% } %>
-				</select>
+                <select id="ul-selector" name="ul-selector">
+                    <option>Select component category</option>
+                    <% for (var i=0 , keys = Object.keys(components); i < keys.length; i++) { %>
+                        <option value="#list-<%= keys[i] %>">
+                            <%=keys[i] %>
+                        </option>
+                        <% } %>
+                </select>
             </div>
             <div class="user-name right">
-            	<p>Hello, <strong><%= name %></strong></p>
+                <p>Hello, <strong><%= name %></strong></p>
             </div>
             <div class="clearfix"></div>
         </header>
         <section class="cubesat">
-	        <div class="cube-structures">
-	        	<div class="component-position" id="primary-power">Primary Power: </div>
-	        	<div class="component-position" id="backup-power">Backup Power: </div>
-	        	<div class="component-position" id="propulsion">Propulsion: </div>
-	        	<div class="component-position" id="aodcs">Attitude and Orbit Determination Controller: </div>
-	        	<div class="component-position" id="cdh">Command and Data Handling: </div>
-	        	<div class="component-position" id="communication">Communication: </div>
-	        	<div class="component-position" id="thermal">Thermal Control:</div>
-	        	<div class="component-position" id="detector">Scientific Experiments: </div>
-	        	<div class="component-position" id="structure">Structure: </div>
-        	</div>
+            <div class="cube-structures">
+                <div class="component-position" id="primary-power">Primary Power: </div>
+                <div class="component-position" id="backup-power">Backup Power: </div>
+                <div class="component-position" id="propulsion">Propulsion: </div>
+                <div class="component-position" id="aodcs">Attitude and Orbit Determination Controller: </div>
+                <div class="component-position" id="cdh">Command and Data Handling: </div>
+                <div class="component-position" id="communication">Communication: </div>
+                <div class="component-position" id="thermal">Thermal Control:</div>
+                <div class="component-position" id="detector">Scientific Experiments: </div>
+                <div class="component-position" id="structure">Structure: </div>
+            </div>
         </section>
         <aside class="recap">
-            
+            <!-- -->
         </aside>
         <!-- Off Canvas Menu -->
-	    <aside class="left-off-canvas-menu">
-	        <!-- whatever you want goes here -->
-	        <ul>
-	          <li><a href="#">Item 1</a></li>
-	        ...
-	        </ul>
-	    </aside>
-	    <aside class="components">
-
-            <% for (var i = 0, keys = Object.keys(components); i < keys.length; i++) { %>
+        <aside class="left-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                ...
+            </ul>
+        </aside>
+        <aside class="components">
+            <% for (var i=0 , keys=Object.keys(components); i < keys.length; i++) { %>
                 <% var list = components[keys[i]]; %>
                 <ul id="list-<%= keys[i] %>" class="component-list">
-                    <% for (var j = 0; j < list.length; j++) { %>
+                    <% for (var j=0 ; j < list.length; j++) { %>
                         <li class="component">
-                        	<button class="component-info"><i class="fa fa-info-circle"></i></button>
-                            <%= list[j].name %>
+                            <button class="component-info"><i class="fa fa-info-circle"></i></button>
+                            <%=list[j].name %>
                         </li>
                     <% } %>
                 </ul>
             <% } %>
-	    </aside>
+        </aside>
         <style>
-            #launch-button {
-                width: 150px;
-                height: 50px;
-                position: fixed;
-                bottom: 20px;
-                right: 400px;
-                cursor: pointer;
-            }
+        #launch-button {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 10px;
+            right: 280px;
+            margin: 0;
+            text-align: center;
+            padding: 0;
+        }
         </style>
-        <button id="launch-button" class="button">LAUNCH!</button>
+        <button id="launch-button" class="button"><i class="fa fa-rocket"></i></button>
     </div>
 </div>
