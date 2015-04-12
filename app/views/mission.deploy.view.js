@@ -10,11 +10,8 @@ define(['jquery', 'underscore', 'template!mission.deploy'], function($, _, TPL_m
         render: function(parameters) {
           var self = this;
           self.markup = TPL_mission_deploy(parameters);
-
           self.$el.html(self.markup);
-
           Backbone.View.prototype.render.apply(self, arguments);
-
           return self;
         }
     });

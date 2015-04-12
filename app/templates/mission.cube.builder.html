@@ -8,10 +8,10 @@
                 <h5><i class="fa fa-rocket"></i> Selected mission: <span><%= mission.nicename %></span></h5>
             </div>
             <div class="select-categories right">
-				<select id="ul-selector">
+				<select id="ul-selector" name="ul-selector">
 					<option>Select component category</option>
-					<option value="ul-sensors">Sensors</option>
-					<option value="ul-engines">Engines</option>
+					<option value="#list-sensors">Sensors</option>
+					<option value="#list-engines">Engines</option>
 				</select>
             </div>
             <div class="user-name right">
@@ -45,7 +45,7 @@
 	        </ul>
 	    </aside>
 	    <aside class="components">
-			<ul id="ul-sensors">
+			<ul id="list-sensors" class="component-list">
 				<li class="component">
 					SENSORS #1
 				</li>
@@ -53,7 +53,7 @@
                     SENSORS #2
                 </li>
 			</ul>
-            <ul id="ul-engines">
+            <ul id="list-engines" class="component-list">
                 <li class="component">
                     ENGINE #1
                 </li>
