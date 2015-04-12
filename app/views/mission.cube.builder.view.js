@@ -18,7 +18,7 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
                 name: this.model.get('user-fullname'),
                 mission: this.model.get('mission'),
                 components: _.groupBy(this.model.get('components'), function mapComponent(comp) {
-                    return comp.object.category.replace(' ', '-');
+                    return comp.object.category.replace(/\ /g, '-');
                 })
             });
             self.$el.html(self.markup);
