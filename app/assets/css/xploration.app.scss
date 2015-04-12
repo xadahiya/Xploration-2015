@@ -13,6 +13,9 @@ body {
     &.ready {
         background: #ececf0
     }
+    .no-padding {
+        padding: 0;
+    }
 }
 
 .xploration-app {
@@ -62,7 +65,7 @@ body {
         right: 0;
         &.mission-selector {
             article.form {
-                background: rgba(255, 255, 255, .9);
+                background: rgba(255, 255, 255, .8);
                 padding: 50px;
                 max-width: 960px;
                 margin: auto;
@@ -73,9 +76,26 @@ body {
                 opacity: 0;
                 &.show {
                     opacity: 1;
-                     -webkit-filter: blur(0px);
+                    -webkit-filter: blur(0px);
                 }
             }
         }
+        &.mission-cube-builder {
+            header {
+                height: 50px;
+                width: 100%;
+                background: rgba(255, 255, 255, .9);
+                button {
+                    height: 50px;
+                    margin: 0;
+                    width: 50px;
+                    padding: 0;
+                }
+                h5 font-size: 20px;
+                line-height: 50px;
+                margin: 0;
+            }
+        }
     }
+}
 }

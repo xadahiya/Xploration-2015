@@ -1,7 +1,7 @@
-define(['jquery', 'underscore', 'template!mission.builder'], function($, _, TPL_mission_builder) {
+define(['jquery', 'underscore', 'template!mission.cube.builder'], function($, _, TPL_mission_builder) {
 
     var XplorationApp = Backbone.View.extend({
-        className: 'mission-builder view',
+        className: 'mission-cube-builder view',
         id: 'mission-builder',
         initialize: function() {
             var self = this;
