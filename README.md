@@ -14,6 +14,8 @@ SpaceApps Rome 2015 - Project Chronos
 
 ```
 
+## Instructions
+
 ```
 npm install node-static
 ```
