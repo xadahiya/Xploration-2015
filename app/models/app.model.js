@@ -2,14 +2,16 @@ define([
   'jquery', 
   'underscore', 
   'backbone',
-  'json!missions'
-], function($, _, Backbone, missions) {
+  'json!missions',
+  'json!components'
+], function($, _, Backbone, missions, components) {
 
   var AppModel = Backbone.Model.extend({
     
     initialize: function() {
       Backbone.Model.prototype.initialize.apply(this, arguments);
       this.set('missions', missions);
+      this.set('components', components);
     },
 
     setMission: function(index) {
