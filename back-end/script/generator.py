@@ -151,7 +151,7 @@ def generateObject(name, subsystem):
         result['minTemperature'] = randomValue(subsystem['minTemperature'])
         result['maxTemperature'] = randomValue(subsystem['maxTemperature'])
 
-        result['cost'] = result['maxTemperature'] - result['minTemperature'] * 20
+        result['cost'] = (result['maxTemperature'] - result['minTemperature']) * 20
 
         if result['power'] == 0:
             result['type'] = 'passive'
