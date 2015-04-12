@@ -1,0 +1,9 @@
+{
+  "payload": {"id": "A"},
+  "fundamentalComponents": [{"id":"A"}, {"id":"B"}],
+  "scientificInterest": 2000, 
+  "mass": { "value": 250, "max": 1000},
+  "volume": { "value": 250, "max": 1000},
+  "power": { "value": 250, "max": 1000},
+  "temperature": { "valueMin": 7, "valueMax": 28, "min": -15, "max": 20}
+}
