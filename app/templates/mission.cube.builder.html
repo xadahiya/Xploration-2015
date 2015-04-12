@@ -1,0 +1,66 @@
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <header>
+            <div class="left">
+                <a class="button left-off-canvas-toggle off-canvas-toggle" id="toggle-sidebar"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="left">
+                <h5><i class="fa fa-rocket"></i> Selected mission: <span><%= mission.nicename %></span></h5>
+            </div>
+            <div class="select-categories right">
+				<select id="ul-selector" name="ul-selector">
+					<option>Select component category</option>
+					<option value="#list-sensors">Sensors</option>
+					<option value="#list-engines">Engines</option>
+				</select>
+            </div>
+            <div class="user-name right">
+            	<p>Hello, <strong><%= name %></strong></p>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <section class="cubesat">
+        	pippo
+        </section>
+        <aside class="recap">
+            <ul>
+                <li class="check-ok">
+                    <!-- Icon -->
+                    <i class="fa fa-connectdevelop"></i>
+                    <span class="numbers">10/50</span>
+                </li>
+                <li class="check-error">
+                    <!-- Icon -->
+                    <i class="fa fa-connectdevelop"></i>
+                    <span class="numbers">10/50</span>
+                </li>
+            </ul>
+        </aside>
+        <!-- Off Canvas Menu -->
+	    <aside class="left-off-canvas-menu">
+	        <!-- whatever you want goes here -->
+	        <ul>
+	          <li><a href="#">Item 1</a></li>
+	        ...
+	        </ul>
+	    </aside>
+	    <aside class="components">
+			<ul id="list-sensors" class="component-list">
+				<li class="component">
+					SENSORS #1
+				</li>
+                <li class="component">
+                    SENSORS #2
+                </li>
+			</ul>
+            <ul id="list-engines" class="component-list">
+                <li class="component">
+                    ENGINE #1
+                </li>
+                <li class="component">
+                    ENGINE #2
+                </li>
+            </ul>
+	    </aside>
+    </div>
+</div>

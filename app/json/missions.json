@@ -1,0 +1,153 @@
+[
+
+
+
+  {
+    "target": "earth",
+    "type": "earth_observation",
+    "scientific_interest": 1000,
+    "nicename": "Earth Observation",
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "spectrometer"
+      },
+      {
+        "type": "payload",
+        "class": "interferometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": 50
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "target": "comet",
+    "nicename": "Comet Observation",
+    "type": "celestial_body_observation",
+    "scientific_interest": 5000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "optical"
+      },
+      {
+        "type": "payload",
+        "class": "detector"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -80,
+        "maxValue": 80
+      }
+    ]
+  },
+
+
+
+
+
+
+
+  {
+    "target": "earth",
+    "type": "atmospheric_analysis",
+    "scientific_interest": 2000,
+    "nicename": "Earth Atmospheric Analysis",
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "photometer"
+      },
+      {
+        "type": "payload",
+        "class": "interferometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": 50
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "target": "mars",
+    "type": "celestial_body_observation",
+    "scientific_interest": 4000,
+    "nicename": "Mars Observation",
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "optical"
+      },
+      {
+        "type": "payload",
+        "class": "photometer"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -60,
+        "maxValue": 50
+      }
+    ]
+  },
+
+
+
+
+  {
+    "target": "moon",
+    "type": "celestial_body_observation",
+    "nicename": "Moon Observation",
+    "scientific_interest": 3000,
+    "requirements": [
+      {
+        "type": "payload",
+        "class": "spectrometer"
+      },
+      {
+        "type": "payload",
+        "class": "detector"
+      }
+    ],
+    "constraints": [
+      {
+        "key": "temperature-range",
+        "minValue": -50,
+        "maxValue": 50
+      }
+    ]
+  }
+
+
+
+
+]

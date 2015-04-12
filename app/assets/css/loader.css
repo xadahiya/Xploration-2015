@@ -1,0 +1,75 @@
+.preloader {
+    width: 50px;
+    height: 50px;
+    margin: -25px auto;
+    background-color: rgba(255,255,255, .5);
+    border-radius: 100%;
+    -webkit-animation: scaleout 1s infinite ease-in-out;
+    -moz-animation: scaleout 1s infinite ease-in-out;
+    -ms-animation: scaleout 1s infinite ease-in-out;
+    -o-animation: scaleout 1s infinite ease-in-out;
+    animation: scaleout 1s infinite ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    z-index: 2;
+}
+
+@-webkit-keyframes scaleout {
+    0% {
+        -webkit-transform: scale(0)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0
+    }
+}
+
+@-moz-keyframes scaleout {
+    0% {
+        -moz-transform: scale(0)
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 0
+    }
+}
+
+@-ms-keyframes scaleout {
+    0% {
+        -ms-transform: scale(0)
+    }
+    100% {
+        -ms-transform: scale(1);
+        opacity: 0
+    }
+}
+
+@-o-keyframes scaleout {
+    0% {
+        -o-transform: scale(0)
+    }
+    100% {
+        -o-transform: scale(1);
+        opacity: 0
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0)
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        opacity: 0
+    }
+}
