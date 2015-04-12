@@ -172,8 +172,12 @@ body {
                     padding-left: 5px;
                     display: inline-block;
                     text-align: left;
+                    @include transition(background, .25s, ease-out);
                     &:first-child {
                         //margin-top: 40px;
+                    }
+                    &.is-dropping {
+                        background: #ccc;
                     }
                 }
             }
@@ -182,7 +186,6 @@ body {
                 right: 0;
                 top: 50px;
                 bottom: 0px;
-                overflow: scroll;
                 width: 270px;
                 background: rgba(255, 255, 255, .8);
                 ul {
@@ -199,6 +202,11 @@ body {
                         cursor: pointer;
                         background: rgba(20, 20, 20, .5);
                         border-right: 5px solid #333;
+                        @include transition(background, .25s, ease-out);
+                        &.is-dragging {
+                            background: rgba(240, 240, 240, 0.9);
+                            color: #222;
+                        }
                         //@include borderRadius(5px);
                         //@include shadow();
                         .component-info {
