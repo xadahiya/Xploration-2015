@@ -110,7 +110,8 @@ define([
                 this.activeView = null;
             }
             if (renderView) {
-                renderView.render().$el.appendTo(this.el);
+                renderView.$el.appendTo(this.el);
+                renderView.render();
                 this.activeView = renderView;
             }
             return this;

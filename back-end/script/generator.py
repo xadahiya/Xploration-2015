@@ -9,9 +9,7 @@ subsystems = dict({
         "mass": {"min": 30, "max": 100},
         "cost": {"min": 1000, "max": 10000},
         "minWorkingTemp": { "min": -40, "max": -20 },
-        "maxWorkingTemp": { "min": 40, "max": 90 },
-        "description": "Any scientific instrument carried by a space probe or an artificial satellite",
-        "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere"
+        "maxWorkingTemp": { "min": 40, "max": 90 }
     },
     "propulsion" : {
         "slug": "PROP",
@@ -20,9 +18,7 @@ subsystems = dict({
         "mass": {"min": 10, "max": 100},
         "cost": {"min": 5000, "max": 25000},
         "minWorkingTemp": { "min": -30, "max": -10 },
-        "maxWorkingTemp": { "min": 20, "max": 80 },
-        "description": "The set of subsystems needed to make a spacecraft moving in space",
-        "extended": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling"
+        "maxWorkingTemp": { "min": 20, "max": 80 }
     },
     "detector" : {
         "slug": "DTR",
@@ -31,9 +27,7 @@ subsystems = dict({
         "mass": {"min": 50, "max": 400},
         "cost": {"min": 2000, "max": 15000},
         "minWorkingTemp": { "min": -30, "max": -10 },
-        "maxWorkingTemp": { "min": 20, "max": 80 },
-        "description": "Any scientific instrument carried by a space probe or an artificial satellite",
-        "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere"
+        "maxWorkingTemp": { "min": 20, "max": 80 }
     },
     "primary power" : {
         "slug": "PPW",
@@ -43,9 +37,7 @@ subsystems = dict({
         "mass": {"min": 30, "max": 100},
         "cost": {"min": 2000, "max": 10000},
         "minWorkingTemp": { "min": -60, "max": -40 },
-        "maxWorkingTemp": { "min": 50, "max": 100 },
-        "description": "The set of subsystems needed to make a spacecraft to collect energy to operate",
-        "extended": "Complex devices-subsystems used for collecting energy."
+        "maxWorkingTemp": { "min": 50, "max": 100 }
     },
     "backup power" : {
         "slug": "BCK",
@@ -55,9 +47,7 @@ subsystems = dict({
         "mass": {"min": 100, "max": 300},
         "cost": {"min": 5000, "max": 25000},
         "minWorkingTemp": { "min": -30, "max": -10 },
-        "maxWorkingTemp": { "min": 20, "max": 80 },
-        "description": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.",
-        "extended": "The set of subsystems needed to make a spacecraft to store energy from the primary power source."
+        "maxWorkingTemp": { "min": 20, "max": 80 }
     },
     "thermal" : {
         "slug": "THR",
@@ -66,9 +56,7 @@ subsystems = dict({
         "mass": {"min": 20, "max": 150},
         "cost": {"min": 500, "max": 4000},
         "minTemperature": { "min": -100, "max": -30 },
-        "maxTemperature": { "min": 50, "max": 100 },
-        "description": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
-        "extended": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events"
+        "maxTemperature": { "min": 50, "max": 100 }
     },
     "structure" : {
         "slug": "STR",
@@ -76,9 +64,7 @@ subsystems = dict({
         "mass": {"min": 10, "max": 100},
         "cost": {"min": 2000, "max": 35000},
         "minWorkingTemp": { "min": -90, "max": -30 },
-        "maxWorkingTemp": { "min": 30, "max": 70 },
-        "description": "Artifacts or rigid devices used to create a supporting structure for all the others devices.",
-        "extended": "It's the skeleton and framework of the spacecraft."
+        "maxWorkingTemp": { "min": 30, "max": 70 }
     },
     "command and data" : {
         "slug": "CDH",
@@ -87,9 +73,7 @@ subsystems = dict({
         "mass": {"min": 20, "max": 70},
         "cost": {"min": 1000, "max": 5000},
         "minWorkingTemp": { "min": -20, "max": -10 },
-        "maxWorkingTemp": { "min": 10, "max": 50 },
-        "description": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
-        "extended": "The DH system shall: Enable HK and science data flow \u2013 Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) \u2013 Attitude data \u2013 Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data \u2013 Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression."
+        "maxWorkingTemp": { "min": 10, "max": 50 }
     },
     "attitude and orbit control" : {
         "slug": "AODCS",
@@ -100,9 +84,7 @@ subsystems = dict({
         "minWorkingTemp": { "min": -50, "max": -30 },
         "maxWorkingTemp": { "min": 30, "max": 70 },
         "active": ["magnetic torque", "cold gas", "microthrusters"],
-        "passive": ["rotation", "gravity", "solar pressure"],
-        "description": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.",
-        "extended": "Attitude and Orbit Determination Control"
+        "passive": ["rotation", "gravity", "solar pressure"]
     }
 })
 
@@ -125,8 +107,6 @@ def generateObject(name, subsystem):
     result = {}
     result['mass'] = randomValue(subsystem['mass'])
     result['category'] = name
-    result['description'] = subsystem['description']
-    result['extended'] = subsystem['extended']
     if 'minWorkingTemp' in subsystem.keys(): # general rule
         if not name == 'structure':
             result['power'] = randomValue(subsystem['power'])   
