@@ -1,4 +1,5 @@
 var express = require('express');
+var path    = require('path');
 var app = express();
 
 var fs = require('fs');
@@ -7,8 +8,11 @@ var missionTypes = require('./missionTypes');
 var destinations = require('./destinations');
 var componentTypes = require('./componentTypes');
 var setEvaluateScore = require('./evaluateScore');
+var components = require('./components');
 
 var apis = [
+  { id: 'components',
+    descr: 'Available components organized by categories' },
   { id: 'missionTypes',
     descr: 'Available mission types' },
   { id: 'destinations',
@@ -22,6 +26,7 @@ var apiStr = JSON.stringify(apis);
 
 var app = express();
 app.use(bodyParser());
+app.use('/app', express.static(path.join(__dirname, '..', 'app')));
 
 missionTypes(app, function(err) {
   if (err) { console.err(err); return; }
@@ -35,17 +40,22 @@ missionTypes(app, function(err) {
       setEvaluateScore(app, function(err) {
         if (err) { console.err(err); return; }
 
-        app.get('/', function (req, res) {
-          res.contentType('application/json');
-          res.send(apiStr);
-        });
+        components(app, function(err) {
+          if (err) { console.err(err); return; }
 
-        var server = app.listen(3000, function () {
+          app.get('/', function (req, res) {
+            res.contentType('application/json');
+            res.send(apiStr);
+          });
 
-          var host = server.address().address;
-          var port = server.address().port;
+          var server = app.listen(3000, function () {
 
-          console.log('Back-end app listening at http://%s:%s', host, port);
+            var host = server.address().address;
+            var port = server.address().port;
+
+            console.log('Back-end app listening at http://%s:%s', host, port);
+
+          });
 
         });
 

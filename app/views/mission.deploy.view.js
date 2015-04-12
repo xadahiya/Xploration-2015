@@ -13,6 +13,9 @@ define(['jquery', 'underscore', 'template!mission.deploy'], function($, _, TPL_m
           self.$el.html(self.markup);
           Backbone.View.prototype.render.apply(self, arguments);
           return self;
+        },
+        calculateScore: function() {
+          
         }
     });
 

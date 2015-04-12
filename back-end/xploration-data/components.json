@@ -1,365 +1,419 @@
 [
     {
-        "id": 1, 
         "object": {
-            "cost": 3889, 
-            "power": -54, 
-            "maxWorkingTemp": 72, 
-            "type": "optical", 
-            "mass": 59, 
-            "volume": 56, 
-            "category": "detector", 
-            "minWorkingTemp": -24
+            "mass": 98, 
+            "volume": 93, 
+            "power": -62, 
+            "maxWorkingTemp": 65, 
+            "minWorkingTemp": -33, 
+            "cost": 9431, 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "communication"
         }, 
-        "name": "46W detector"
+        "id": 1, 
+        "name": "7W communication"
     }, 
     {
-        "id": 2, 
         "object": {
-            "cost": 8460, 
-            "power": 1692, 
-            "maxWorkingTemp": 57, 
             "mass": 96, 
             "volume": 64, 
-            "category": "primary power", 
-            "minWorkingTemp": -44
+            "power": 225, 
+            "maxWorkingTemp": 91, 
+            "minWorkingTemp": -51, 
+            "cost": 1125, 
+            "extended": "Complex devices-subsystems used for collecting energy.", 
+            "description": "The set of subsystems needed to make a spacecraft to collect energy to operate", 
+            "category": "primary power"
         }, 
-        "name": "13KV primary power"
+        "id": 2, 
+        "name": "34KV primary power"
     }, 
     {
-        "id": 3, 
         "object": {
-            "cost": 3849, 
-            "power": -70, 
-            "maxWorkingTemp": 78, 
-            "mass": 84, 
-            "volume": 81, 
-            "category": "communication", 
-            "minWorkingTemp": -38
-        }, 
-        "name": "26KV communication"
-    }, 
-    {
-        "id": 4, 
-        "object": {
-            "cost": 4251, 
-            "power": -24, 
-            "maxWorkingTemp": 29, 
-            "mass": 35, 
-            "volume": 31, 
-            "category": "command and data", 
-            "minWorkingTemp": -14
-        }, 
-        "name": "29T command and data"
-    }, 
-    {
-        "id": 5, 
-        "object": {
-            "cost": 9760, 
-            "power": 610, 
-            "maxWorkingTemp": 37, 
-            "mass": 252, 
-            "volume": 126, 
-            "category": "backup power", 
-            "minWorkingTemp": -30
-        }, 
-        "name": "31W backup power"
-    }, 
-    {
-        "id": 6, 
-        "object": {
-            "cost": 17263, 
-            "power": -111, 
-            "maxWorkingTemp": 60, 
-            "mass": 48, 
-            "volume": 48, 
-            "category": "propulsion", 
-            "minWorkingTemp": -20
-        }, 
-        "name": "10T propulsion"
-    }, 
-    {
-        "id": 7, 
-        "object": {
-            "cost": 1577, 
-            "minTemperature": -76, 
-            "type": "passive", 
-            "maxTemperature": 57, 
-            "mass": 125, 
-            "volume": 121, 
-            "power": 0, 
+            "maxTemperature": 87, 
+            "volume": 63, 
+            "cost": 1907, 
+            "power": -31, 
+            "mass": 64, 
+            "type": "active", 
+            "minTemperature": -91, 
+            "extended": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events", 
+            "description": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .", 
             "category": "thermal"
         }, 
-        "name": "23JFG thermal"
-    }, 
-    {
-        "id": 8, 
-        "object": {
-            "cost": 11666, 
-            "volume": 33, 
-            "maxWorkingTemp": 58, 
-            "mass": 30, 
-            "power": 0, 
-            "category": "structure", 
-            "minWorkingTemp": -55
-        }, 
-        "name": "42T structure"
-    }, 
-    {
-        "id": 9, 
-        "object": {
-            "cost": 7877, 
-            "power": -56, 
-            "maxWorkingTemp": 66, 
-            "type": "active", 
-            "mechanism": "magnetic torque", 
-            "mass": 78, 
-            "volume": 76, 
-            "category": "attitude and orbit control", 
-            "minWorkingTemp": -50
-        }, 
-        "name": "23T attitude and orbit control"
-    }, 
-    {
-        "id": 2, 
-        "object": {
-            "cost": 8776, 
-            "power": -40, 
-            "maxWorkingTemp": 54, 
-            "type": "spectrometer", 
-            "mass": 358, 
-            "volume": 362, 
-            "category": "detector", 
-            "minWorkingTemp": -20
-        }, 
-        "name": "10JFG detector"
-    }, 
-    {
         "id": 3, 
-        "object": {
-            "cost": 6915, 
-            "power": 1383, 
-            "maxWorkingTemp": 87, 
-            "mass": 63, 
-            "volume": 42, 
-            "category": "primary power", 
-            "minWorkingTemp": -42
-        }, 
-        "name": "26JFG primary power"
+        "name": "24T thermal"
     }, 
     {
+        "object": {
+            "mass": 55, 
+            "volume": 52, 
+            "power": -15, 
+            "maxWorkingTemp": 33, 
+            "minWorkingTemp": -13, 
+            "cost": 3381, 
+            "extended": "The DH system shall: Enable HK and science data flow \u2013 Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) \u2013 Attitude data \u2013 Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data \u2013 Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.", 
+            "description": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.", 
+            "category": "command and data"
+        }, 
         "id": 4, 
-        "object": {
-            "cost": 9422, 
-            "power": -23, 
-            "maxWorkingTemp": 61, 
-            "mass": 47, 
-            "volume": 45, 
-            "category": "communication", 
-            "minWorkingTemp": -40
-        }, 
-        "name": "28W communication"
+        "name": "36KV command and data"
     }, 
     {
+        "object": {
+            "mass": 83, 
+            "volume": 84, 
+            "power": 0, 
+            "maxWorkingTemp": 52, 
+            "minWorkingTemp": -66, 
+            "cost": 4216, 
+            "extended": "It's the skeleton and framework of the spacecraft.", 
+            "description": "Artifacts or rigid devices used to create a supporting structure for all the others devices.", 
+            "category": "structure"
+        }, 
         "id": 5, 
-        "object": {
-            "cost": 3893, 
-            "power": -29, 
-            "maxWorkingTemp": 42, 
-            "mass": 36, 
-            "volume": 35, 
-            "category": "command and data", 
-            "minWorkingTemp": -20
-        }, 
-        "name": "39KV command and data"
+        "name": "1T structure"
     }, 
     {
+        "object": {
+            "mass": 266, 
+            "volume": 133, 
+            "power": 375, 
+            "maxWorkingTemp": 40, 
+            "minWorkingTemp": -14, 
+            "cost": 6000, 
+            "extended": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "description": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "category": "backup power"
+        }, 
         "id": 6, 
-        "object": {
-            "cost": 10192, 
-            "power": 637, 
-            "maxWorkingTemp": 72, 
-            "mass": 196, 
-            "volume": 98, 
-            "category": "backup power", 
-            "minWorkingTemp": -23
-        }, 
-        "name": "10W backup power"
+        "name": "26T backup power"
     }, 
     {
-        "id": 7, 
         "object": {
-            "cost": 7301, 
-            "power": -151, 
-            "maxWorkingTemp": 59, 
-            "mass": 33, 
-            "volume": 36, 
-            "category": "propulsion", 
-            "minWorkingTemp": -20
+            "mass": 10, 
+            "volume": 14, 
+            "power": -93, 
+            "maxWorkingTemp": 70, 
+            "minWorkingTemp": -16, 
+            "cost": 16037, 
+            "extended": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling", 
+            "description": "The set of subsystems needed to make a spacecraft moving in space", 
+            "category": "propulsion"
         }, 
+        "id": 7, 
+        "name": "34KV propulsion"
+    }, 
+    {
+        "object": {
+            "cost": 10958, 
+            "mass": 55, 
+            "volume": 52, 
+            "power": -127, 
+            "maxWorkingTemp": 42, 
+            "minWorkingTemp": -49, 
+            "type": "active", 
+            "extended": "Attitude and Orbit Determination Control", 
+            "mechanism": "cold gas", 
+            "description": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.", 
+            "category": "attitude and orbit control"
+        }, 
+        "id": 8, 
+        "name": "42W attitude and orbit control"
+    }, 
+    {
+        "object": {
+            "cost": 12261, 
+            "mass": 230, 
+            "volume": 226, 
+            "power": -98, 
+            "maxWorkingTemp": 75, 
+            "minWorkingTemp": -28, 
+            "type": "optical", 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "detector"
+        }, 
+        "id": 9, 
+        "name": "0KV detector"
+    }, 
+    {
+        "object": {
+            "mass": 41, 
+            "volume": 44, 
+            "power": -192, 
+            "maxWorkingTemp": 58, 
+            "minWorkingTemp": -36, 
+            "cost": 1891, 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "communication"
+        }, 
+        "id": 2, 
+        "name": "39JFG communication"
+    }, 
+    {
+        "object": {
+            "mass": 71, 
+            "volume": 47, 
+            "power": 594, 
+            "maxWorkingTemp": 85, 
+            "minWorkingTemp": -52, 
+            "cost": 2970, 
+            "extended": "Complex devices-subsystems used for collecting energy.", 
+            "description": "The set of subsystems needed to make a spacecraft to collect energy to operate", 
+            "category": "primary power"
+        }, 
+        "id": 3, 
+        "name": "22W primary power"
+    }, 
+    {
+        "object": {
+            "maxTemperature": 88, 
+            "volume": 132, 
+            "cost": 1008, 
+            "power": -81, 
+            "mass": 133, 
+            "type": "active", 
+            "minTemperature": -46, 
+            "extended": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events", 
+            "description": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .", 
+            "category": "thermal"
+        }, 
+        "id": 4, 
+        "name": "28T thermal"
+    }, 
+    {
+        "object": {
+            "mass": 51, 
+            "volume": 51, 
+            "power": -45, 
+            "maxWorkingTemp": 38, 
+            "minWorkingTemp": -19, 
+            "cost": 2786, 
+            "extended": "The DH system shall: Enable HK and science data flow \u2013 Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) \u2013 Attitude data \u2013 Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data \u2013 Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.", 
+            "description": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.", 
+            "category": "command and data"
+        }, 
+        "id": 5, 
+        "name": "37T command and data"
+    }, 
+    {
+        "object": {
+            "mass": 18, 
+            "volume": 19, 
+            "power": 0, 
+            "maxWorkingTemp": 68, 
+            "minWorkingTemp": -67, 
+            "cost": 19444, 
+            "extended": "It's the skeleton and framework of the spacecraft.", 
+            "description": "Artifacts or rigid devices used to create a supporting structure for all the others devices.", 
+            "category": "structure"
+        }, 
+        "id": 6, 
+        "name": "22W structure"
+    }, 
+    {
+        "object": {
+            "mass": 162, 
+            "volume": 81, 
+            "power": 168, 
+            "maxWorkingTemp": 30, 
+            "minWorkingTemp": -11, 
+            "cost": 2688, 
+            "extended": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "description": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "category": "backup power"
+        }, 
+        "id": 7, 
+        "name": "10JFG backup power"
+    }, 
+    {
+        "object": {
+            "mass": 47, 
+            "volume": 47, 
+            "power": -187, 
+            "maxWorkingTemp": 38, 
+            "minWorkingTemp": -30, 
+            "cost": 8209, 
+            "extended": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling", 
+            "description": "The set of subsystems needed to make a spacecraft moving in space", 
+            "category": "propulsion"
+        }, 
+        "id": 8, 
+        "name": "35JFG propulsion"
+    }, 
+    {
+        "object": {
+            "cost": 6164, 
+            "mass": 67, 
+            "volume": 63, 
+            "power": -13, 
+            "maxWorkingTemp": 56, 
+            "minWorkingTemp": -49, 
+            "type": "active", 
+            "extended": "Attitude and Orbit Determination Control", 
+            "mechanism": "microthrusters", 
+            "description": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.", 
+            "category": "attitude and orbit control"
+        }, 
+        "id": 9, 
+        "name": "13KV attitude and orbit control"
+    }, 
+    {
+        "object": {
+            "cost": 11533, 
+            "mass": 376, 
+            "volume": 376, 
+            "power": -99, 
+            "maxWorkingTemp": 42, 
+            "minWorkingTemp": -30, 
+            "type": "photometer", 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "detector"
+        }, 
+        "id": 10, 
+        "name": "25JFG detector"
+    }, 
+    {
+        "object": {
+            "mass": 61, 
+            "volume": 61, 
+            "power": -92, 
+            "maxWorkingTemp": 47, 
+            "minWorkingTemp": -33, 
+            "cost": 5609, 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "communication"
+        }, 
+        "id": 3, 
+        "name": "10KV communication"
+    }, 
+    {
+        "object": {
+            "mass": 44, 
+            "volume": 29, 
+            "power": 534, 
+            "maxWorkingTemp": 93, 
+            "minWorkingTemp": -50, 
+            "cost": 2670, 
+            "extended": "Complex devices-subsystems used for collecting energy.", 
+            "description": "The set of subsystems needed to make a spacecraft to collect energy to operate", 
+            "category": "primary power"
+        }, 
+        "id": 4, 
+        "name": "27T primary power"
+    }, 
+    {
+        "object": {
+            "maxTemperature": 80, 
+            "volume": 102, 
+            "cost": 780, 
+            "power": 0, 
+            "mass": 99, 
+            "type": "passive", 
+            "minTemperature": -35, 
+            "extended": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events", 
+            "description": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .", 
+            "category": "thermal"
+        }, 
+        "id": 5, 
+        "name": "37JFG thermal"
+    }, 
+    {
+        "object": {
+            "mass": 29, 
+            "volume": 28, 
+            "power": -15, 
+            "maxWorkingTemp": 22, 
+            "minWorkingTemp": -20, 
+            "cost": 2467, 
+            "extended": "The DH system shall: Enable HK and science data flow \u2013 Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) \u2013 Attitude data \u2013 Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data \u2013 Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.", 
+            "description": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.", 
+            "category": "command and data"
+        }, 
+        "id": 6, 
+        "name": "24JFG command and data"
+    }, 
+    {
+        "object": {
+            "mass": 72, 
+            "volume": 72, 
+            "power": 0, 
+            "maxWorkingTemp": 35, 
+            "minWorkingTemp": -64, 
+            "cost": 4861, 
+            "extended": "It's the skeleton and framework of the spacecraft.", 
+            "description": "Artifacts or rigid devices used to create a supporting structure for all the others devices.", 
+            "category": "structure"
+        }, 
+        "id": 7, 
+        "name": "45JFG structure"
+    }, 
+    {
+        "object": {
+            "mass": 211, 
+            "volume": 105, 
+            "power": 1213, 
+            "maxWorkingTemp": 65, 
+            "minWorkingTemp": -13, 
+            "cost": 19408, 
+            "extended": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "description": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.", 
+            "category": "backup power"
+        }, 
+        "id": 8, 
+        "name": "42KV backup power"
+    }, 
+    {
+        "object": {
+            "mass": 15, 
+            "volume": 16, 
+            "power": -142, 
+            "maxWorkingTemp": 38, 
+            "minWorkingTemp": -26, 
+            "cost": 16798, 
+            "extended": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling", 
+            "description": "The set of subsystems needed to make a spacecraft moving in space", 
+            "category": "propulsion"
+        }, 
+        "id": 9, 
         "name": "26W propulsion"
     }, 
     {
-        "id": 8, 
         "object": {
-            "cost": 1259, 
-            "minTemperature": -58, 
-            "type": "active", 
-            "maxTemperature": 99, 
-            "mass": 55, 
-            "volume": 54, 
-            "power": -68, 
-            "category": "thermal"
-        }, 
-        "name": "41KV thermal"
-    }, 
-    {
-        "id": 9, 
-        "object": {
-            "cost": 19444, 
-            "volume": 22, 
-            "maxWorkingTemp": 52, 
-            "mass": 18, 
-            "power": 0, 
-            "category": "structure", 
-            "minWorkingTemp": -83
-        }, 
-        "name": "28KV structure"
-    }, 
-    {
-        "id": 10, 
-        "object": {
-            "cost": 4059, 
-            "power": -41, 
-            "maxWorkingTemp": 54, 
-            "type": "active", 
-            "mechanism": "microthrusters", 
-            "mass": 18, 
-            "volume": 19, 
-            "category": "attitude and orbit control", 
-            "minWorkingTemp": -32
-        }, 
-        "name": "35W attitude and orbit control"
-    }, 
-    {
-        "id": 3, 
-        "object": {
-            "cost": 10421, 
-            "power": -28, 
-            "maxWorkingTemp": 26, 
-            "type": "optical", 
-            "mass": 274, 
-            "volume": 277, 
-            "category": "detector", 
-            "minWorkingTemp": -15
-        }, 
-        "name": "5JFG detector"
-    }, 
-    {
-        "id": 4, 
-        "object": {
-            "cost": 8595, 
-            "power": 1719, 
-            "maxWorkingTemp": 81, 
-            "mass": 73, 
-            "volume": 48, 
-            "category": "primary power", 
-            "minWorkingTemp": -54
-        }, 
-        "name": "44JFG primary power"
-    }, 
-    {
-        "id": 5, 
-        "object": {
-            "cost": 9656, 
-            "power": -26, 
-            "maxWorkingTemp": 82, 
-            "mass": 97, 
-            "volume": 96, 
-            "category": "communication", 
-            "minWorkingTemp": -26
-        }, 
-        "name": "34T communication"
-    }, 
-    {
-        "id": 6, 
-        "object": {
-            "cost": 1899, 
-            "power": -17, 
-            "maxWorkingTemp": 32, 
-            "mass": 30, 
-            "volume": 28, 
-            "category": "command and data", 
-            "minWorkingTemp": -15
-        }, 
-        "name": "49W command and data"
-    }, 
-    {
-        "id": 7, 
-        "object": {
-            "cost": 12608, 
-            "power": 788, 
-            "maxWorkingTemp": 25, 
-            "mass": 290, 
-            "volume": 145, 
-            "category": "backup power", 
-            "minWorkingTemp": -24
-        }, 
-        "name": "34T backup power"
-    }, 
-    {
-        "id": 8, 
-        "object": {
-            "cost": 20745, 
-            "power": -147, 
-            "maxWorkingTemp": 33, 
-            "mass": 76, 
-            "volume": 76, 
-            "category": "propulsion", 
-            "minWorkingTemp": -25
-        }, 
-        "name": "13KV propulsion"
-    }, 
-    {
-        "id": 9, 
-        "object": {
-            "cost": 1541, 
-            "minTemperature": -74, 
-            "type": "passive", 
-            "maxTemperature": 61, 
-            "mass": 72, 
-            "volume": 71, 
-            "power": 0, 
-            "category": "thermal"
-        }, 
-        "name": "22KV thermal"
-    }, 
-    {
-        "id": 10, 
-        "object": {
-            "cost": 31818, 
-            "volume": 15, 
-            "maxWorkingTemp": 34, 
-            "mass": 11, 
-            "power": 0, 
-            "category": "structure", 
-            "minWorkingTemp": -56
-        }, 
-        "name": "10T structure"
-    }, 
-    {
-        "id": 11, 
-        "object": {
-            "cost": 12384, 
-            "power": 0, 
-            "maxWorkingTemp": 37, 
-            "type": "passive", 
-            "mechanism": "gravity", 
+            "cost": 1341, 
             "mass": 46, 
-            "volume": 44, 
-            "category": "attitude and orbit control", 
-            "minWorkingTemp": -43
+            "volume": 50, 
+            "power": -102, 
+            "maxWorkingTemp": 58, 
+            "minWorkingTemp": -44, 
+            "type": "active", 
+            "extended": "Attitude and Orbit Determination Control", 
+            "mechanism": "magnetic torque", 
+            "description": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.", 
+            "category": "attitude and orbit control"
         }, 
-        "name": "43T attitude and orbit control"
+        "id": 10, 
+        "name": "20JFG attitude and orbit control"
+    }, 
+    {
+        "object": {
+            "cost": 14354, 
+            "mass": 119, 
+            "volume": 119, 
+            "power": -87, 
+            "maxWorkingTemp": 50, 
+            "minWorkingTemp": -15, 
+            "type": "spectrometer", 
+            "extended": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere", 
+            "description": "Any scientific instrument carried by a space probe or an artificial satellite", 
+            "category": "detector"
+        }, 
+        "id": 11, 
+        "name": "0JFG detector"
     }
 ]

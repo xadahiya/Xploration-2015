@@ -3,7 +3,7 @@ define([
   'underscore', 
   'backbone',
   'json!missions',
-  'json!components'
+  'json!../components'
 ], function($, _, Backbone, missions, components) {
 
   var AppModel = Backbone.Model.extend({
@@ -24,6 +24,16 @@ define([
 
     load: function() {
       console.log('LOADING...');
+    },
+
+    calculateStats: function(cb) {
+      return cb(null, {
+        cost: 5000,
+        term: {curr: 10, max: 12},
+        weight: {curr: 10, max: 12},
+        volume: {curr: 10, max: 12},
+        power: {curr: 10, max: 12}
+      });
     }
 
   });
