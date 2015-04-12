@@ -30,6 +30,11 @@ define([
             });
             self.$el.html(self.markup);
             Backbone.View.prototype.render.apply(self, arguments);
+            self.$el.find('.component').draggable({
+                revert: true,
+                containment: "window"
+                // helper: "clone"
+            });
             self.loadStats();
             return self;
         },

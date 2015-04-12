@@ -46,12 +46,6 @@ define(['jquery', 'underscore', 'template!mission.selector', 'jquery-ui'], funct
             setTimeout(function() {
                 $('section.cubesat').addClass('show');
             }, 500);
-
-            $('.component').draggable({
-                revert: true,
-                containment: "window"
-                //helper: "clone"
-            });
         }
     });
 
