@@ -97,8 +97,7 @@ define([
                     self.$el.find('article.form').addClass('show');
                 });
             });
-            self.show(opts);
-
+            self.show();
         	return self;
         },
         show: function(opts) {

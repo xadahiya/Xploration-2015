@@ -12,6 +12,10 @@ define([
       this.set('missions', missions);
     },
 
+    setMission: function(index) {
+
+    },
+
     save: function() {
       console.log('SAVING...');
     },

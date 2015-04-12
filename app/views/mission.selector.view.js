@@ -9,10 +9,11 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
         },
         render: function(parameters) {
             var self = this;
-            self.markup = TPL_mission_selector(parameters);
+            
+            self.markup = TPL_mission_selector({model: this.model});
 
             self.$el.html(self.markup);
-
+            
             Backbone.View.prototype.render.apply(self, arguments);
 
             return self;
