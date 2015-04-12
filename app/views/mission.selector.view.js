@@ -18,6 +18,7 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
             return self;
         },
         onClickGoBtn: function(ev) {
+            var self = this;
             var missionId = $('#mission-id-input').val();
             var fullName  = $('#user-fullname-input').val();
             var mission   = this.model.get('missions')[missionId];
@@ -27,7 +28,7 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
             if (!fullName || fullName.length < 2) {
                 return alert('Insert your full name, please.');
             }
-            this.model.set('active-mission', mission);
+            this.model.set('mission', mission);
             this.model.set('user-fullname', fullName);
             window.app.show('missionCubeBuilder');
             $(document).foundation({
@@ -40,6 +41,7 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
                     close_on_click: false
                 }
             });
+            setTimeout(function(){ $('section.cubesat').addClass('show'); }, 500);
         }
     });
 

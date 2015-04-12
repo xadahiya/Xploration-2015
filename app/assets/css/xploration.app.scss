@@ -27,6 +27,7 @@ body {
     right: 0;
     bottom: 0;
     display: none;
+    overflow: hidden;
     .vidbg {
         position: absolute;
         width: 100%;
@@ -138,6 +139,19 @@ body {
                         font-weight: bold;
                         color: #777;
                     }
+                }
+            }
+            section.cubesat {
+                position:absolute;
+                top:50px;
+                left:50px;
+                right: 270px;
+                bottom: 0;
+                background: rgba(255,255,255,.1) url(../images/cubesat.png) no-repeat center center;
+                @include transition(opacity, 1.5s, ease-out);
+                opacity: 0;
+                &.show {
+                    opacity: 1;
                 }
             }
             aside.components {

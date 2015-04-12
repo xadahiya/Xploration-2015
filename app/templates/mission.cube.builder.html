@@ -5,20 +5,23 @@
                 <a class="button left-off-canvas-toggle off-canvas-toggle" id="toggle-sidebar"><i class="fa fa-bars"></i></a>
             </div>
             <div class="left">
-                <h5><i class="fa fa-rocket"></i> Selected mission: <span>Mission Name</span></h5>
+                <h5><i class="fa fa-rocket"></i> Selected mission: <span><%= mission.nicename %></span></h5>
             </div>
             <div class="select-categories right">
-				<select>
+				<select id="ul-selector">
 					<option>Select component category</option>
-					<option val="">Component Category</option>
-					<option val="">Component Category</option>
+					<option value="ul-sensors">Sensors</option>
+					<option value="ul-engines">Engines</option>
 				</select>
             </div>
             <div class="user-name right">
-            	<p>Hello, <strong>Remy</strong></p>
+            	<p>Hello, <strong><%= name %></strong></p>
             </div>
             <div class="clearfix"></div>
         </header>
+        <section class="cubesat">
+        	pippo
+        </section>
         <aside class="recap">
             <ul>
                 <li class="check-ok">
@@ -42,11 +45,22 @@
 	        </ul>
 	    </aside>
 	    <aside class="components">
-			<ul>
+			<ul id="ul-sensors">
 				<li class="component">
-
+					SENSORS #1
 				</li>
+                <li class="component">
+                    SENSORS #2
+                </li>
 			</ul>
+            <ul id="ul-engines">
+                <li class="component">
+                    ENGINE #1
+                </li>
+                <li class="component">
+                    ENGINE #2
+                </li>
+            </ul>
 	    </aside>
     </div>
 </div>
