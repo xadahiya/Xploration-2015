@@ -6,6 +6,16 @@ var missionTypes = require('./missionTypes');
 var destinations = require('./destinations');
 var componentTypes = require('./componentTypes');
 
+var apis = [
+  { id: 'missionTypes',
+    descr: 'Available mission types' },
+  { id: 'destinations',
+    descr: 'Available mission destinations' },
+    { id: 'subsystems',
+      descr: 'Available types of subsystems' }
+  ];
+var apiStr = JSON.stringify(apis);
+
 missionTypes(app, function(err) {
   if (err) { console.err(err); return; }
 
@@ -16,7 +26,8 @@ missionTypes(app, function(err) {
       if (err) { console.err(err); return; }
 
       app.get('/', function (req, res) {
-        res.send('Hello World!');
+        res.contentType('application/json');
+        res.send(apiStr);
       });
 
       var server = app.listen(3000, function () {

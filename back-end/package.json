@@ -9,6 +9,7 @@
   "author": "miguel.ceriani@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "underscore": "^1.8.3"
   }
 }
