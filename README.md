@@ -14,5 +14,17 @@ SpaceApps Rome 2015 - Project Chronos
 
 ```
 
+```
+npm install node-static
+```
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />Quest'opera di <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.pramantha.net" property="cc:attributionName" rel="cc:attributionURL">Project Chronos</a> è distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale</a>.
+From the `/app` directory:
+
+```
+static
+```
+
+Open the app address in the browser.
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
