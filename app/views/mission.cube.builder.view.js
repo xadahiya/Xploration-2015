@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'template!mission.cube.builder'], function($, _, TPL_mission_builder) {
+define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-offcanvas'], function($, _, TPL_mission_builder) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'mission-cube-builder view',
@@ -8,14 +8,14 @@ define(['jquery', 'underscore', 'template!mission.cube.builder'], function($, _,
             return Backbone.View.prototype.initialize.apply(self, arguments);
         },
         render: function(parameters) {
-          var self = this;
-          self.markup = TPL_mission_builder(parameters);
+            var self = this;
+            self.markup = TPL_mission_builder(parameters);
 
-          self.$el.html(self.markup);
+            self.$el.html(self.markup);
 
-          Backbone.View.prototype.render.apply(self, arguments);
+            Backbone.View.prototype.render.apply(self, arguments);
 
-          return self;
+            return self;
         }
     });
 

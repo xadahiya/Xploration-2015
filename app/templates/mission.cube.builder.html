@@ -1,8 +1,47 @@
-<header>
-	<div class="large-1 small-1 medium-1 columns no-padding">
-		<button class="off-canvas-toggle" id="toggle-sidebar"><i class="fa fa-bars"></i></button>
-	</div>
-	<div class="large-11 small-11 medium-11 columns">
-		<h5>Mission Name</h5>
-	</div>
-</header>
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <header>
+            <div class="left">
+                <a class="button left-off-canvas-toggle off-canvas-toggle" id="toggle-sidebar"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="left">
+                <h5><i class="fa fa-rocket"></i> Selected mission: <span>Mission Name</span></h5>
+            </div>
+            <div class="select-categories right">
+				<select>
+					<option>Select component category</option>
+					<option val="">Component Category</option>
+					<option val="">Component Category</option>
+				</select>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <aside class="recap">
+            <ul>
+                <li class="check-ok">
+                    <!-- Icon -->
+                    <i class="fa fa-connectdevelop"></i>
+                    <span class="numbers">10/50</span>
+                </li>
+                <li class="check-error">
+                    <!-- Icon -->
+                    <i class="fa fa-connectdevelop"></i>
+                    <span class="numbers">10/50</span>
+                </li>
+            </ul>
+        </aside>
+        <!-- Off Canvas Menu -->
+	    <aside class="left-off-canvas-menu">
+	        <!-- whatever you want goes here -->
+	        <ul>
+	          <li><a href="#">Item 1</a></li>
+	        ...
+	        </ul>
+	    </aside>
+	    <aside class="components">
+			<ul>
+				<li></li>
+			</ul>
+	    </aside>
+    </div>
+</div>

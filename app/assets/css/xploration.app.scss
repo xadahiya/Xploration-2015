@@ -9,6 +9,7 @@
 
 body {
     background: #171717;
+    color: #222;
     @include transition(background, 500ms, ease-out);
     &.ready {
         background: #ececf0
@@ -81,21 +82,110 @@ body {
             }
         }
         &.mission-cube-builder {
+            .off-canvas-wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow: visible;
+                .inner-wrap {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
             header {
+                color: #222;
                 height: 50px;
                 width: 100%;
                 background: rgba(255, 255, 255, .9);
-                button {
+                -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+                .select-categories {
+                    margin-top: 6px;
+                    width: 230px;
+                    margin-right: 20px;
+                    select {
+                        margin-bottom: 0
+                    }
+                }
+                .off-canvas-toggle {
                     height: 50px;
                     margin: 0;
                     width: 50px;
                     padding: 0;
+                    line-height: 50px;
+                    display: block;
                 }
-                h5 font-size: 20px;
-                line-height: 50px;
-                margin: 0;
+                h5 {
+                    font-size: 20px;
+                    line-height: 50px;
+                    margin: 0;
+                    margin-left: 20px;
+                    span {
+                        font-weight: bold;
+                        color: #777;
+                    }
+                }
+            }
+            aside.components {
+                position: absolute;
+                right: 0;
+                top: 50px;
+                bottom: 0px;
+                width: 270px;
+                background: rgba(255, 255, 255, .7);
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                    }
+                }
+            }
+            aside.recap {
+                width: 50px;
+                padding-top: 10px;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 50px;
+                bottom: 0;
+                left: 0;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        line-height: 1.2;
+                        padding: 0;
+                        margin: 0;
+                        min-height: 50px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 20px;
+                        .numbers {
+                            font-weight: bold;
+                            font-size: 12px;
+                        }
+                        &:first-child {
+                            margin-top: 20px;
+                        }
+                        &.check-ok {
+                            color: #5cae1f;
+                        }
+                        &.check-error {
+                            color: #af0b0b;
+                        }
+                        i {
+                            color: #222 !important;
+                        }
+                    }
+                }
             }
         }
     }
-}
 }

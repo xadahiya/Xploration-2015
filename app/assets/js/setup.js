@@ -7,6 +7,7 @@
             'jquery': 'assets/js/jquery-1.11.2.min',
             'foundation': 'assets/js/foundation.min',
             'foundation-dropdown': 'assets/js/foundation/foundation.dropdown',
+            'foundation-offcanvas': 'assets/js/foundation/foundation.offcanvas',
             'underscore': 'assets/js/underscore-min',
             'backbone': 'assets/js/backbone-min',
             'template': 'assets/js/template',
@@ -18,6 +19,9 @@
             'foundation': {
                 deps: ['jquery']
             },
+            'foundation-offcanvas': {
+                deps: ['foundation']
+            },
             'foundation-dropdown': {
                 deps: ['foundation']
             },
@@ -28,7 +32,7 @@
                 deps: ['jquery', 'underscore', 'backbone']
             },
             'xploration.app': {
-                deps: ['jquery', 'underscore', 'backbone', 'foundation', 'vidbg', 'foundation-dropdown']
+                deps: ['jquery', 'underscore', 'backbone', 'foundation', 'vidbg', 'foundation-dropdown', 'foundation-offcanvas']
             },
         },
         urlArgs: "version=" + version
