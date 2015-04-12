@@ -1,338 +1,365 @@
 [
     {
+        "id": 1, 
         "object": {
-            "volume": 50,
-            "minWorkingTemp": -53,
-            "maxWorkingTemp": 92,
-            "mass": 76,
-            "power": 731,
-            "cost": 3655,
-            "category": "primary power"
-        },
-        "name": "44W primary power"
-    },
+            "cost": 3889, 
+            "power": -54, 
+            "maxWorkingTemp": 72, 
+            "type": "optical", 
+            "mass": 59, 
+            "volume": 56, 
+            "category": "detector", 
+            "minWorkingTemp": -24
+        }, 
+        "name": "46W detector"
+    }, 
     {
+        "id": 2, 
         "object": {
-            "volume": 28,
-            "minWorkingTemp": -17,
-            "maxWorkingTemp": 15,
-            "mass": 33,
-            "power": -46,
-            "cost": 1597,
-            "category": "command and data"
-        },
-        "name": "23T command and data"
-    },
+            "cost": 8460, 
+            "power": 1692, 
+            "maxWorkingTemp": 57, 
+            "mass": 96, 
+            "volume": 64, 
+            "category": "primary power", 
+            "minWorkingTemp": -44
+        }, 
+        "name": "13KV primary power"
+    }, 
     {
+        "id": 3, 
         "object": {
-            "volume": 55,
-            "minWorkingTemp": -21,
-            "maxWorkingTemp": 63,
-            "mass": 52,
-            "power": -114,
-            "cost": 5721,
-            "category": "communication"
-        },
-        "name": "19W communication"
-    },
+            "cost": 3849, 
+            "power": -70, 
+            "maxWorkingTemp": 78, 
+            "mass": 84, 
+            "volume": 81, 
+            "category": "communication", 
+            "minWorkingTemp": -38
+        }, 
+        "name": "26KV communication"
+    }, 
     {
+        "id": 4, 
         "object": {
-            "volume": 262,
-            "minWorkingTemp": -12,
-            "maxWorkingTemp": 77,
-            "mass": 263,
-            "power": -80,
-            "type": "photometer",
-            "category": "detector",
-            "cost": 2733
-        },
-        "name": "36KV detector"
-    },
+            "cost": 4251, 
+            "power": -24, 
+            "maxWorkingTemp": 29, 
+            "mass": 35, 
+            "volume": 31, 
+            "category": "command and data", 
+            "minWorkingTemp": -14
+        }, 
+        "name": "29T command and data"
+    }, 
     {
+        "id": 5, 
         "object": {
-            "volume": 62,
-            "minWorkingTemp": -27,
-            "maxWorkingTemp": 75,
-            "mass": 63,
-            "power": -191,
-            "cost": 7939,
-            "category": "propulsion"
-        },
-        "name": "48KV propulsion"
-    },
+            "cost": 9760, 
+            "power": 610, 
+            "maxWorkingTemp": 37, 
+            "mass": 252, 
+            "volume": 126, 
+            "category": "backup power", 
+            "minWorkingTemp": -30
+        }, 
+        "name": "31W backup power"
+    }, 
     {
+        "id": 6, 
         "object": {
-            "volume": 58,
-            "minWorkingTemp": -23,
-            "maxWorkingTemp": 47,
-            "mass": 116,
-            "power": 1142,
-            "cost": 18272,
-            "category": "backup power"
-        },
-        "name": "12KV backup power"
-    },
+            "cost": 17263, 
+            "power": -111, 
+            "maxWorkingTemp": 60, 
+            "mass": 48, 
+            "volume": 48, 
+            "category": "propulsion", 
+            "minWorkingTemp": -20
+        }, 
+        "name": "10T propulsion"
+    }, 
     {
+        "id": 7, 
         "object": {
-            "volume": 146,
-            "maxTemperature": 93,
-            "mass": 144,
-            "type": "active",
-            "power": -37,
-            "minTemperature": -80,
-            "category": "thermal",
-            "cost": 1693
-        },
-        "name": "36T thermal"
-    },
+            "cost": 1577, 
+            "minTemperature": -76, 
+            "type": "passive", 
+            "maxTemperature": 57, 
+            "mass": 125, 
+            "volume": 121, 
+            "power": 0, 
+            "category": "thermal"
+        }, 
+        "name": "23JFG thermal"
+    }, 
     {
+        "id": 8, 
         "object": {
-            "volume": 40,
-            "minWorkingTemp": -60,
-            "maxWorkingTemp": 52,
-            "mass": 40,
-            "power": 0,
-            "cost": 8750,
-            "category": "structure"
-        },
-        "name": "26JFG structure"
-    },
+            "cost": 11666, 
+            "volume": 33, 
+            "maxWorkingTemp": 58, 
+            "mass": 30, 
+            "power": 0, 
+            "category": "structure", 
+            "minWorkingTemp": -55
+        }, 
+        "name": "42T structure"
+    }, 
     {
+        "id": 9, 
         "object": {
-            "volume": 22,
-            "minWorkingTemp": -35,
-            "mechanism": "solar pressure",
-            "maxWorkingTemp": 53,
-            "mass": 19,
-            "power": 0,
-            "type": "passive",
-            "category": "attitude and orbit control",
-            "cost": 8405
-        },
-        "name": "0T attitude and orbit control"
-    },
+            "cost": 7877, 
+            "power": -56, 
+            "maxWorkingTemp": 66, 
+            "type": "active", 
+            "mechanism": "magnetic torque", 
+            "mass": 78, 
+            "volume": 76, 
+            "category": "attitude and orbit control", 
+            "minWorkingTemp": -50
+        }, 
+        "name": "23T attitude and orbit control"
+    }, 
     {
+        "id": 2, 
         "object": {
-            "volume": 27,
-            "minWorkingTemp": -57,
-            "maxWorkingTemp": 83,
-            "mass": 41,
-            "power": 717,
-            "cost": 3585,
-            "category": "primary power"
-        },
-        "name": "42W primary power"
-    },
+            "cost": 8776, 
+            "power": -40, 
+            "maxWorkingTemp": 54, 
+            "type": "spectrometer", 
+            "mass": 358, 
+            "volume": 362, 
+            "category": "detector", 
+            "minWorkingTemp": -20
+        }, 
+        "name": "10JFG detector"
+    }, 
     {
+        "id": 3, 
         "object": {
-            "volume": 40,
-            "minWorkingTemp": -17,
-            "maxWorkingTemp": 15,
-            "mass": 44,
-            "power": -12,
-            "cost": 1660,
-            "category": "command and data"
-        },
-        "name": "7JFG command and data"
-    },
+            "cost": 6915, 
+            "power": 1383, 
+            "maxWorkingTemp": 87, 
+            "mass": 63, 
+            "volume": 42, 
+            "category": "primary power", 
+            "minWorkingTemp": -42
+        }, 
+        "name": "26JFG primary power"
+    }, 
     {
+        "id": 4, 
         "object": {
-            "volume": 68,
-            "minWorkingTemp": -40,
-            "maxWorkingTemp": 84,
-            "mass": 64,
-            "power": -2,
-            "cost": 6887,
-            "category": "communication"
-        },
-        "name": "15W communication"
-    },
+            "cost": 9422, 
+            "power": -23, 
+            "maxWorkingTemp": 61, 
+            "mass": 47, 
+            "volume": 45, 
+            "category": "communication", 
+            "minWorkingTemp": -40
+        }, 
+        "name": "28W communication"
+    }, 
     {
+        "id": 5, 
         "object": {
-            "volume": 343,
-            "minWorkingTemp": -28,
-            "maxWorkingTemp": 77,
-            "mass": 346,
-            "power": -48,
-            "type": "photometer",
-            "category": "detector",
-            "cost": 3338
-        },
-        "name": "33JFG detector"
-    },
+            "cost": 3893, 
+            "power": -29, 
+            "maxWorkingTemp": 42, 
+            "mass": 36, 
+            "volume": 35, 
+            "category": "command and data", 
+            "minWorkingTemp": -20
+        }, 
+        "name": "39KV command and data"
+    }, 
     {
+        "id": 6, 
         "object": {
-            "volume": 53,
-            "minWorkingTemp": -16,
-            "maxWorkingTemp": 42,
-            "mass": 58,
-            "power": -157,
-            "cost": 16451,
-            "category": "propulsion"
-        },
-        "name": "47KV propulsion"
-    },
+            "cost": 10192, 
+            "power": 637, 
+            "maxWorkingTemp": 72, 
+            "mass": 196, 
+            "volume": 98, 
+            "category": "backup power", 
+            "minWorkingTemp": -23
+        }, 
+        "name": "10W backup power"
+    }, 
     {
+        "id": 7, 
         "object": {
-            "volume": 147,
-            "minWorkingTemp": -16,
-            "maxWorkingTemp": 58,
-            "mass": 294,
-            "power": 1483,
-            "cost": 23728,
-            "category": "backup power"
-        },
-        "name": "44W backup power"
-    },
+            "cost": 7301, 
+            "power": -151, 
+            "maxWorkingTemp": 59, 
+            "mass": 33, 
+            "volume": 36, 
+            "category": "propulsion", 
+            "minWorkingTemp": -20
+        }, 
+        "name": "26W propulsion"
+    }, 
     {
+        "id": 8, 
         "object": {
-            "volume": 145,
-            "maxTemperature": 90,
-            "mass": 149,
-            "type": "active",
-            "power": -36,
-            "minTemperature": -98,
-            "category": "thermal",
-            "cost": 2050
-        },
-        "name": "15W thermal"
-    },
+            "cost": 1259, 
+            "minTemperature": -58, 
+            "type": "active", 
+            "maxTemperature": 99, 
+            "mass": 55, 
+            "volume": 54, 
+            "power": -68, 
+            "category": "thermal"
+        }, 
+        "name": "41KV thermal"
+    }, 
     {
+        "id": 9, 
         "object": {
-            "volume": 70,
-            "minWorkingTemp": -52,
-            "maxWorkingTemp": 55,
-            "mass": 75,
-            "power": 0,
-            "cost": 4666,
-            "category": "structure"
-        },
-        "name": "36JFG structure"
-    },
+            "cost": 19444, 
+            "volume": 22, 
+            "maxWorkingTemp": 52, 
+            "mass": 18, 
+            "power": 0, 
+            "category": "structure", 
+            "minWorkingTemp": -83
+        }, 
+        "name": "28KV structure"
+    }, 
     {
+        "id": 10, 
         "object": {
-            "volume": 63,
-            "minWorkingTemp": -45,
-            "mechanism": "magnetic torque",
-            "maxWorkingTemp": 47,
-            "mass": 65,
-            "power": -64,
-            "type": "active",
-            "category": "attitude and orbit control",
-            "cost": 12913
-        },
-        "name": "29KV attitude and orbit control"
-    },
+            "cost": 4059, 
+            "power": -41, 
+            "maxWorkingTemp": 54, 
+            "type": "active", 
+            "mechanism": "microthrusters", 
+            "mass": 18, 
+            "volume": 19, 
+            "category": "attitude and orbit control", 
+            "minWorkingTemp": -32
+        }, 
+        "name": "35W attitude and orbit control"
+    }, 
     {
+        "id": 3, 
         "object": {
-            "volume": 64,
-            "minWorkingTemp": -54,
-            "maxWorkingTemp": 68,
-            "mass": 96,
-            "power": 1835,
-            "cost": 9175,
-            "category": "primary power"
-        },
-        "name": "4KV primary power"
-    },
+            "cost": 10421, 
+            "power": -28, 
+            "maxWorkingTemp": 26, 
+            "type": "optical", 
+            "mass": 274, 
+            "volume": 277, 
+            "category": "detector", 
+            "minWorkingTemp": -15
+        }, 
+        "name": "5JFG detector"
+    }, 
     {
+        "id": 4, 
         "object": {
-            "volume": 26,
-            "minWorkingTemp": -11,
-            "maxWorkingTemp": 43,
-            "mass": 24,
-            "power": -20,
-            "cost": 2250,
-            "category": "command and data"
-        },
-        "name": "9JFG command and data"
-    },
+            "cost": 8595, 
+            "power": 1719, 
+            "maxWorkingTemp": 81, 
+            "mass": 73, 
+            "volume": 48, 
+            "category": "primary power", 
+            "minWorkingTemp": -54
+        }, 
+        "name": "44JFG primary power"
+    }, 
     {
+        "id": 5, 
         "object": {
-            "volume": 64,
-            "minWorkingTemp": -40,
-            "maxWorkingTemp": 75,
-            "mass": 66,
-            "power": -123,
-            "cost": 6431,
-            "category": "communication"
-        },
-        "name": "41W communication"
-    },
+            "cost": 9656, 
+            "power": -26, 
+            "maxWorkingTemp": 82, 
+            "mass": 97, 
+            "volume": 96, 
+            "category": "communication", 
+            "minWorkingTemp": -26
+        }, 
+        "name": "34T communication"
+    }, 
     {
+        "id": 6, 
         "object": {
-            "volume": 174,
-            "minWorkingTemp": -18,
-            "maxWorkingTemp": 31,
-            "mass": 175,
-            "power": -49,
-            "type": "spectrometer",
-            "category": "detector",
-            "cost": 5518
-        },
-        "name": "11JFG detector"
-    },
+            "cost": 1899, 
+            "power": -17, 
+            "maxWorkingTemp": 32, 
+            "mass": 30, 
+            "volume": 28, 
+            "category": "command and data", 
+            "minWorkingTemp": -15
+        }, 
+        "name": "49W command and data"
+    }, 
     {
+        "id": 7, 
         "object": {
-            "volume": 83,
-            "minWorkingTemp": -21,
-            "maxWorkingTemp": 78,
-            "mass": 83,
-            "power": -69,
-            "cost": 7280,
-            "category": "propulsion"
-        },
-        "name": "13W propulsion"
-    },
+            "cost": 12608, 
+            "power": 788, 
+            "maxWorkingTemp": 25, 
+            "mass": 290, 
+            "volume": 145, 
+            "category": "backup power", 
+            "minWorkingTemp": -24
+        }, 
+        "name": "34T backup power"
+    }, 
     {
+        "id": 8, 
         "object": {
-            "volume": 122,
-            "minWorkingTemp": -13,
-            "maxWorkingTemp": 67,
-            "mass": 245,
-            "power": 1229,
-            "cost": 19664,
-            "category": "backup power"
-        },
-        "name": "29KV backup power"
-    },
+            "cost": 20745, 
+            "power": -147, 
+            "maxWorkingTemp": 33, 
+            "mass": 76, 
+            "volume": 76, 
+            "category": "propulsion", 
+            "minWorkingTemp": -25
+        }, 
+        "name": "13KV propulsion"
+    }, 
     {
+        "id": 9, 
         "object": {
-            "volume": 110,
-            "maxTemperature": 63,
-            "mass": 110,
-            "type": "passive",
-            "power": 0,
-            "minTemperature": -76,
-            "category": "thermal",
-            "cost": 1583
-        },
-        "name": "32W thermal"
-    },
+            "cost": 1541, 
+            "minTemperature": -74, 
+            "type": "passive", 
+            "maxTemperature": 61, 
+            "mass": 72, 
+            "volume": 71, 
+            "power": 0, 
+            "category": "thermal"
+        }, 
+        "name": "22KV thermal"
+    }, 
     {
+        "id": 10, 
         "object": {
-            "volume": 47,
-            "minWorkingTemp": -71,
-            "maxWorkingTemp": 50,
-            "mass": 52,
-            "power": 0,
-            "cost": 6730,
-            "category": "structure"
-        },
-        "name": "1T structure"
-    },
+            "cost": 31818, 
+            "volume": 15, 
+            "maxWorkingTemp": 34, 
+            "mass": 11, 
+            "power": 0, 
+            "category": "structure", 
+            "minWorkingTemp": -56
+        }, 
+        "name": "10T structure"
+    }, 
     {
+        "id": 11, 
         "object": {
-            "volume": 74,
-            "minWorkingTemp": -43,
-            "mechanism": "magnetic torque",
-            "maxWorkingTemp": 49,
-            "mass": 75,
-            "power": -147,
-            "type": "active",
-            "category": "attitude and orbit control",
-            "cost": 10935
-        },
-        "name": "23JFG attitude and orbit control"
+            "cost": 12384, 
+            "power": 0, 
+            "maxWorkingTemp": 37, 
+            "type": "passive", 
+            "mechanism": "gravity", 
+            "mass": 46, 
+            "volume": 44, 
+            "category": "attitude and orbit control", 
+            "minWorkingTemp": -43
+        }, 
+        "name": "43T attitude and orbit control"
     }
 ]
