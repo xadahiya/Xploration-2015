@@ -13,7 +13,7 @@ body {
     color: #222;
     @include transition(background, 500ms, ease-out);
     &.ready {
-        background: #ececf0
+        background: black;
     }
     .no-padding {
         padding: 0;
@@ -157,6 +157,25 @@ body {
                 &.show {
                     opacity: 1;
                 }
+                .cube-structures {
+                    margin: 5px auto;
+                    text-align: center;
+                }
+                .component-position {
+                    width: 330px;
+                    height: 35px;
+                    background: #aaa;
+                    border-left: 10px solid #746a6a;
+                    //margin-left: 20px;
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                    padding-left: 5px;
+                    display: inline-block;
+                    text-align: left;
+                    &:first-child {
+                        //margin-top: 40px;
+                    }
+                }
             }
             aside.components {
                 position: absolute;
@@ -173,11 +192,14 @@ body {
                     li.component {
                         position: relative;
                         list-style: none;
-                        margin: 30px;
-                        padding: 20px;
-                        color: $primary;
-                        background: rgba(20, 20, 20, .1);
-                        @include borderRadius(5px);
+                        margin: 20px;
+                        padding: 10px;
+                        color: white;
+                        font-size: 12px;
+                        cursor: pointer;
+                        background: rgba(20, 20, 20, .5);
+                        border-right: 5px solid #333;
+                        //@include borderRadius(5px);
                         //@include shadow();
                         .component-info {
                             position: absolute;

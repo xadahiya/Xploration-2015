@@ -5,6 +5,7 @@
         baseUrl: "./",
         paths: {
             'jquery': 'assets/js/jquery-1.11.2.min',
+            'jquery-ui': 'assets/js/jquery-ui.min',
             'foundation': 'assets/js/foundation.min',
             'foundation-dropdown': 'assets/js/foundation/foundation.dropdown',
             'foundation-offcanvas': 'assets/js/foundation/foundation.offcanvas',
@@ -16,6 +17,9 @@
             'vidbg': 'assets/js/vidbg.min'
         },
         shim: {
+            'jquery-ui': {
+                deps: ['jquery']
+            },
             'foundation': {
                 deps: ['jquery']
             },
