@@ -27,7 +27,7 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
             if (!fullName || fullName.length < 2) {
                 return alert('Insert your full name, please.');
             }
-            this.model.set('active-mission', mission);
+            this.model.set('mission', mission);
             this.model.set('user-fullname', fullName);
             window.app.show('missionCubeBuilder');
             $(document).foundation({
