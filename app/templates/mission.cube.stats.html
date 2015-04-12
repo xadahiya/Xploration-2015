@@ -1,0 +1,17 @@
+<ul>
+  <!-- term -->
+  <li class="<% print(true ? 'check-ok' : 'check-error'); %>">
+    <i class="fa fa-lightbulb-o"></i><br />
+    <span class="numbers"><%= term.curr %>/<%= term.max %></span>
+  </li>
+  <!-- plug -->
+  <li class="<% print(true ? 'check-ok' : 'check-error'); %>">
+    <i class="fa fa-plug"></i><br />
+    <span class="numbers"><%= power.curr %>/<%= power.max %></span>
+  </li>
+  <!-- dollar -->
+  <li class="<% print(true ? 'check-ok' : 'check-error'); %>">
+    <i class="fa fa-usd"></i><br />
+    <span class="numbers"><%= cost %></span>
+  </li>
+</ul>
