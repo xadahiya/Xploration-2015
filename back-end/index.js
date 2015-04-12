@@ -1,4 +1,5 @@
 var express = require('express');
+var path    = require('path');
 var app = express();
 
 var fs = require('fs');
@@ -25,6 +26,7 @@ var apiStr = JSON.stringify(apis);
 
 var app = express();
 app.use(bodyParser());
+app.use('/app', express.static(path.join(__dirname, '..', 'app')));
 
 missionTypes(app, function(err) {
   if (err) { console.err(err); return; }

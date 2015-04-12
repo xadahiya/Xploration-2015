@@ -4,7 +4,8 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
         className: 'mission-cube-builder view',
         id: 'mission-builder',
         events: {
-            'change #ul-selector': 'onChangeSelector'
+            'change #ul-selector': 'onChangeSelector',
+            'click #launch-button': 'onClickLaunch'
         },
         initialize: function() {
             var self = this;
@@ -29,6 +30,9 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
             var value = $(ev.currentTarget).val();
             this.$el.find('.component-list').hide();
             this.$el.find(value).show();
+        },
+        onClickLaunch: function(ev) {
+            window.app.show('missionDeploy');
         }
     });
 
