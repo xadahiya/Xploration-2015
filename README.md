@@ -2,15 +2,6 @@
 SpaceApps Rome 2015 - Project Chronos
 
 ```
-├───docs                               
-│   ├───diagrams                       
-│   └───links                          
-├───rdf-space                          
-└───static                             
-    ├───images                         # images
-    │   └───pictograms                 # pictograms
-    └───xploration-data                # JSON game data not included in RDF
-    
 ├───app
 │   ├───assets
 │   │   ├───css
