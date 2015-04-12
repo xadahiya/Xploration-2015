@@ -27,7 +27,7 @@ function components(app, callback) {
               _.omit(comp.object,'category'),
               { id:comp.id,
                 name:comp.name,
-                category:comp.object.category.replace(" ","-") });
+                category:comp.object.category.replace(/\s/g,"-") });
           }),
           _.property('category')
         );
