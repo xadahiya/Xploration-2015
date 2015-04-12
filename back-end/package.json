@@ -9,6 +9,7 @@
   "author": "miguel.ceriani@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.12.2",
     "express": "^4.12.3",
     "underscore": "^1.8.3"
   }
