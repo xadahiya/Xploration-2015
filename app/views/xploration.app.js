@@ -101,7 +101,7 @@ define([
         	return self;
         },
         show: function(opts) {
-            opts           = opts || {};
+            opts           = _.isString(opts) ? {view: opts} : opts || {};
             opts.view      = opts.view || 'missionSelector';
             var renderView = this.views[opts.view];
             if (this.activeView) {

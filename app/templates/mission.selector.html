@@ -1,14 +1,14 @@
 <article class="form text-center">
-	<input type="text" placeholder="Please, insert your fullname" id="name" />
+	<input type="text" placeholder="Please, insert your fullname" id="user-fullname-input" />
 	<p>Select your mission:</p>
-	<select>
+	<select id="mission-id-input">
     <% var missions = model.get('missions'); %>
     <% for (var i = 0; i < missions.length; i++) { %>
-      <option value="i"><%= missions[i].nicename %></option>
+      <option value="<%= i %>"><%= missions[i].nicename %></option>
     <% } %>
 		<!-- <option val="">Random</option> -->
 	</select>
 	<!-- <p>- or -</p> -->
 	<!-- <button class="button" id="random">Create you own mission</button> -->
-  <a href="#"><button class="button" id="random">Create you own mission</button></a>
+  <button class="button" id="go-btn" id="random">Go!</button>
 </article>
