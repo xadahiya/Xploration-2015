@@ -24,6 +24,9 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
             if (!mission) {
                 throw new Error('NO SUCH MISSION, YOU IDIOT!');
             }
+            if (!fullName || fullName.length < 2) {
+                return alert('Insert your full name, please.');
+            }
             this.model.set('active-mission', mission);
             this.model.set('user-fullname', fullName);
             window.app.show('missionBuilder');
