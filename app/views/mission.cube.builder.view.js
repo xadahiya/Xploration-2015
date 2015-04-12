@@ -16,7 +16,10 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
             self.markup = TPL_mission_builder({
                 model: this.model,
                 name: this.model.get('user-fullname'),
-                mission: this.model.get('mission')
+                mission: this.model.get('mission'),
+                components: _.groupBy(this.model.get('components'), function mapComponent(comp) {
+                    return comp.object.category.replace(' ', '-');
+                })
             });
             self.$el.html(self.markup);
             Backbone.View.prototype.render.apply(self, arguments);

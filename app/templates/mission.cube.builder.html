@@ -10,8 +10,9 @@
             <div class="select-categories right">
 				<select id="ul-selector" name="ul-selector">
 					<option>Select component category</option>
-					<option value="#list-sensors">Sensors</option>
-					<option value="#list-engines">Engines</option>
+                    <% for (var i = 0, keys = Object.keys(components); i < keys.length; i++) { %>
+					   <option value="#list-<%= keys[i] %>"><%= keys[i] %></option>
+                    <% } %>
 				</select>
             </div>
             <div class="user-name right">
@@ -45,22 +46,16 @@
 	        </ul>
 	    </aside>
 	    <aside class="components">
-			<ul id="list-sensors" class="component-list">
-				<li class="component">
-					SENSORS #1
-				</li>
-                <li class="component">
-                    SENSORS #2
-                </li>
-			</ul>
-            <ul id="list-engines" class="component-list">
-                <li class="component">
-                    ENGINE #1
-                </li>
-                <li class="component">
-                    ENGINE #2
-                </li>
-            </ul>
+            <% for (var i = 0, keys = Object.keys(components); i < keys.length; i++) { %>
+                <% var list = components[keys[i]]; %>
+                <ul id="list-<%= keys[i] %>" class="component-list">    
+                    <% for (var j = 0; j < list.length; j++) { %>
+                        <li class="component">
+                            <%= list[j].name %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
 	    </aside>
     </div>
 </div>
