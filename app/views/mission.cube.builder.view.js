@@ -30,6 +30,24 @@ define([
             });
             self.$el.html(self.markup);
             Backbone.View.prototype.render.apply(self, arguments);
+            self.$el.find('.component').draggable({
+                revert: true,
+                containment: "window",
+                // helper: "clone"
+                start: function(event, ui) {
+                    $(ui.helper).addClass('is-dragging');
+                },
+                stop: function(event, ui) {
+                    $(ui.helper).removeClass('is-dragging');
+                }
+            });
+            self.$el.find('.droppable-el').droppable({
+                accept: '.component',
+                hoverClass: 'is-dropping',
+                drop: function( event, ui ) {
+                    alert("AEEE");
+                }
+            });
             self.loadStats();
             return self;
         },

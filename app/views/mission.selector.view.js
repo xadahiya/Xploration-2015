@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL_mission_selector) {
+define(['jquery', 'underscore', 'template!mission.selector', 'jquery-ui'], function($, _, TPL_mission_selector) {
 
     var XplorationApp = Backbone.View.extend({
         className: 'mission-selector view',
@@ -12,7 +12,9 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
         },
         render: function(parameters) {
             var self = this;
-            self.markup = TPL_mission_selector({model: this.model});
+            self.markup = TPL_mission_selector({
+                model: this.model
+            });
             self.$el.html(self.markup);
             Backbone.View.prototype.render.apply(self, arguments);
             return self;
@@ -20,8 +22,8 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
         onClickGoBtn: function(ev) {
             var self = this;
             var missionId = $('#mission-id-input').val();
-            var fullName  = $('#user-fullname-input').val();
-            var mission   = this.model.get('missions')[missionId];
+            var fullName = $('#user-fullname-input').val();
+            var mission = this.model.get('missions')[missionId];
             if (!mission) {
                 throw new Error('NO SUCH MISSION, YOU IDIOT!');
             }
@@ -41,7 +43,9 @@ define(['jquery', 'underscore', 'template!mission.selector'], function($, _, TPL
                     close_on_click: false
                 }
             });
-            setTimeout(function(){ $('section.cubesat').addClass('show'); }, 500);
+            setTimeout(function() {
+                $('section.cubesat').addClass('show');
+            }, 500);
         }
     });
 

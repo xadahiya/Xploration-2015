@@ -13,7 +13,7 @@ body {
     color: #222;
     @include transition(background, 500ms, ease-out);
     &.ready {
-        background: #ececf0
+        background: black;
     }
     .no-padding {
         padding: 0;
@@ -157,13 +157,35 @@ body {
                 &.show {
                     opacity: 1;
                 }
+                .cube-structures {
+                    margin: 5px auto;
+                    text-align: center;
+                }
+                .component-position {
+                    width: 330px;
+                    height: 35px;
+                    background: #aaa;
+                    border-left: 10px solid #746a6a;
+                    //margin-left: 20px;
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                    padding-left: 5px;
+                    display: inline-block;
+                    text-align: left;
+                    @include transition(background, .25s, ease-out);
+                    &:first-child {
+                        //margin-top: 40px;
+                    }
+                    &.is-dropping {
+                        background: #ccc;
+                    }
+                }
             }
             aside.components {
                 position: absolute;
                 right: 0;
                 top: 50px;
                 bottom: 0px;
-                overflow: scroll;
                 width: 270px;
                 background: rgba(255, 255, 255, .8);
                 ul {
@@ -173,11 +195,19 @@ body {
                     li.component {
                         position: relative;
                         list-style: none;
-                        margin: 30px;
-                        padding: 20px;
-                        color: $primary;
-                        background: rgba(20, 20, 20, .1);
-                        @include borderRadius(5px);
+                        margin: 20px;
+                        padding: 10px;
+                        color: white;
+                        font-size: 12px;
+                        cursor: pointer;
+                        background: rgba(20, 20, 20, .5);
+                        border-right: 5px solid #333;
+                        @include transition(background, .25s, ease-out);
+                        &.is-dragging {
+                            background: rgba(240, 240, 240, 0.9);
+                            color: #222;
+                        }
+                        //@include borderRadius(5px);
                         //@include shadow();
                         .component-info {
                             position: absolute;
