@@ -3,13 +3,13 @@ var _ = require("underscore");
 
 function setEvaluateScore(app, callback) {
 
-  fs.readFile(
-      'xploration-data/destinations.json',
-      function (err, data) {
-        if (err) {
-          callback(err);
-          return;
-        }
+  // fs.readFile(
+  //     'xploration-data/destinations.json',
+  //     function (err, data) {
+  //       if (err) {
+  //         callback(err);
+  //         return;
+  //       }
 
         // var missionTypes = JSON.parse(data.toString());
         // var missionTypesMap = {};
@@ -70,7 +70,7 @@ function setEvaluateScore(app, callback) {
         });
 
 
-      });
+      // });
 
   callback(null);
 

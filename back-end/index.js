@@ -8,6 +8,7 @@ var missionTypes = require('./missionTypes');
 var destinations = require('./destinations');
 var componentTypes = require('./componentTypes');
 var setEvaluateScore = require('./evaluateScore');
+var setEvaluateTotals = require('./evaluateTotals');
 var components = require('./components');
 
 var apis = [
@@ -20,7 +21,9 @@ var apis = [
     { id: 'subsystems',
       descr: 'Available types of subsystems' },
       { id: 'evaluate-score',
-        descr: 'Evaluate the score of a cube-sat' }
+        descr: 'Evaluate the score of a cube-sat' },
+        { id: 'evaluate-values',
+          descr: 'Evaluate the total values of a cube-sat' }
   ];
 var apiStr = JSON.stringify(apis);
 
@@ -40,20 +43,25 @@ missionTypes(app, function(err) {
       setEvaluateScore(app, function(err) {
         if (err) { console.err(err); return; }
 
-        components(app, function(err) {
+        setEvaluateTotals(app, function(err) {
           if (err) { console.err(err); return; }
 
-          app.get('/', function (req, res) {
-            res.contentType('application/json');
-            res.send(apiStr);
-          });
+          components(app, function(err) {
+            if (err) { console.err(err); return; }
 
-          var server = app.listen(3000, function () {
+            app.get('/', function (req, res) {
+              res.contentType('application/json');
+              res.send(apiStr);
+            });
 
-            var host = server.address().address;
-            var port = server.address().port;
+            var server = app.listen(3000, function () {
 
-            console.log('Back-end app listening at http://%s:%s', host, port);
+              var host = server.address().address;
+              var port = server.address().port;
+
+              console.log('Back-end app listening at http://%s:%s', host, port);
+
+            });
 
           });
 

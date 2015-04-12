@@ -1,0 +1,5 @@
+[
+  { "mass": 50, "volume": 20, "power": 34, "minWorkingTemp": -5, "maxWorkingTemp": 35, "cost": 15},
+  { "mass": 75, "volume": 15, "power": -25, "minWorkingTemp": -12, "maxWorkingTemp": 15, "cost": 25 },
+  { "mass": 25, "volume": 3, "power": -2, "minWorkingTemp": -10, "maxWorkingTemp": 15, "cost": 10 }
+]
