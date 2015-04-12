@@ -51,7 +51,7 @@
                 <% var list = components[keys[i]]; %>
                 <ul id="list-<%= keys[i] %>" class="component-list">
                     <% for (var j=0 ; j < list.length; j++) { %>
-                        <li class="component">
+                        <li class="component" data-component-cat="<%= keys[i] %>" data-component-index="<%= j %>">
                             <button class="component-info"><i class="fa fa-info-circle"></i></button>
                             <%=list[j].name %>
                         </li>

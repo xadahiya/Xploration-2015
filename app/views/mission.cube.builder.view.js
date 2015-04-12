@@ -24,9 +24,7 @@ define([
                 model: this.model,
                 name: this.model.get('user-fullname'),
                 mission: this.model.get('mission'),
-                components: _.groupBy(this.model.get('components'), function mapComponent(comp) {
-                    return comp.object.category.replace(/\ /g, '-');
-                })
+                components: this.model.get('components')
             });
             self.$el.html(self.markup);
             Backbone.View.prototype.render.apply(self, arguments);
@@ -45,10 +43,17 @@ define([
                 accept: '.component',
                 hoverClass: 'is-dropping',
                 drop: function( event, ui ) {
-                    alert("AEEE");
+                    var $draggable = $(ui.draggable[0]);
+                    var cat = $draggable.attr('data-component-cat');
+                    var ind = $draggable.attr('data-component-index');
+                    var com = self.model.get('components')[cat][ind];
+                    self.model.addComponent(com);
+                    self.model.calculateStats(function(err, stats) {
+                        self.$el.find('.recap').html(TPL_mission_stats(stats));
+                    });
+                    $draggable.detach().appendTo(this);
                 }
             });
-            self.loadStats();
             return self;
         },
         onChangeSelector: function(ev) {
@@ -58,13 +63,6 @@ define([
         },
         onClickLaunch: function(ev) {
             window.app.show('missionDeploy');
-        },
-        loadStats: function() {
-            var self = this;
-            self.model.calculateStats(function onStats(err, stats) {
-                if (err) { return alert('error'); }
-                self.$el.find('.recap').html(TPL_mission_stats(stats));
-            });
         }
     });
 
