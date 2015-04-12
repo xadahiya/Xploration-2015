@@ -3,6 +3,9 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
     var XplorationApp = Backbone.View.extend({
         className: 'mission-cube-builder view',
         id: 'mission-builder',
+        events: {
+            'change #ul-selector': 'onChangeSelector'
+        },
         initialize: function() {
             var self = this;
             return Backbone.View.prototype.initialize.apply(self, arguments);
@@ -15,15 +18,13 @@ define(['jquery', 'underscore', 'template!mission.cube.builder', 'foundation-off
                 mission: this.model.get('mission')
             });
             self.$el.html(self.markup);
-            self.$el.find('#ul-selector').on('change', function onChange(ev) {
-                alert('ciao');
-            });
             Backbone.View.prototype.render.apply(self, arguments);
             return self;
         },
         onChangeSelector: function(ev) {
-            alert('ciao');
-
+            var value = $(ev.currentTarget).val();
+            this.$el.find('.component-list').hide();
+            this.$el.find(value).show();
         }
     });
 
