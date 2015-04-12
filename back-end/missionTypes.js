@@ -17,7 +17,7 @@ function missionTypes(app, callback) {
         var missionTypes = JSON.parse(data.toString());
         var missionTypesMap = {};
         missionTypes.map( function(mt) {
-          missionTypesMap[mt.slug] = _.extend({},mt,{id:mt.slug});;
+          missionTypesMap[mt.slug] = _.extend({},mt,{id:mt.slug});
           app.get('/missions/' + mt.slug, function (req, res) {
             res.contentType('application/json');
             res.send(
