@@ -1,0 +1,38 @@
+[
+
+
+
+
+  {
+    "type"     : "payload",
+    "class"    : "spectrometer",
+    "nicename" : "Spectrometer"
+  },
+  {
+    "type"     : "payload",  
+    "class"    : "interferometer",
+    "nicename" : "Interferometer"
+  },
+  {
+    "type"     : "payload",  
+    "class"    : "optical",
+    "nicename" : "Optical"
+  },
+  {
+    "type"     : "payload",  
+    "class"    : "detector",
+    "nicename" : "Detector"
+  },
+
+
+  {
+    "type": "",
+    "": "",
+    "": ""
+  }
+
+
+
+
+
+]
