@@ -160,17 +160,19 @@ def generateObject(name, subsystem):
         return result
 
 output = []
-
+i = 0
 for i in range(0, 3):
     for k, v in subsystems.items():
         # print(k)
         name = str(random.randrange(0, 50)) + str(random.choice(['T', 'W', 'KV', 'JFG'])) + ' ' + k
         obj = {}
-        obj['name'] = name 
+        obj['name'] = name
+        obj['id'] = i + 1
         obj['object'] = generateObject(k, v)
         output.append(obj)
+        i += 1
     
-print(json.dumps(output))
+print(json.dumps(output, indent=4))
 
 
 
