@@ -160,7 +160,7 @@ def generateObject(name, subsystem):
         return result
 
 output = []
-i = 0
+# i = 0
 for i in range(0, 3):
     for k, v in subsystems.items():
         # print(k)
@@ -170,8 +170,9 @@ for i in range(0, 3):
         obj['id'] = i + 1
         obj['object'] = generateObject(k, v)
         output.append(obj)
-        i += 1
-    
+    i += 1
+
+
 print(json.dumps(output, indent=4))
 
 
